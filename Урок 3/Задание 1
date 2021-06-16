@@ -1,0 +1,6 @@
+#way-1
+print("Glo Academy", "\n", "\n", "Glo Academy", sep="")
+#way-2
+print('Glo Academy')
+print('')
+print('Glo Academy')
