@@ -1,0 +1,4 @@
+name = input('Как вас зовут? ', )
+second_name = input('Как ваша фамилия? ', )
+last_name = input('Как ваше отчество? ', )
+print(name, second_name, last_name, sep='-')
