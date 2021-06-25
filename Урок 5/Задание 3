@@ -1,0 +1,18 @@
+a = int(input())
+
+first = a // 100000
+second = a // 10000 % 10
+third = a // 1000 % 10
+
+first_sum = first + second + third
+
+fourth = a % 1000 // 100
+fifth = a % 100 // 10
+sixth = a % 10
+
+second_sum = fourth + fifth + sixth
+
+if first_sum == second_sum:
+    print('Билет', a, 'счастливый')
+else:
+    print('Билет', a, 'НЕсчастливый')
