@@ -1,0 +1,7 @@
+login1 = input()
+login2 = input()
+
+if login1 == login2:
+    print('Все окей!')
+else:
+    print('Пароли не совпадают!')
