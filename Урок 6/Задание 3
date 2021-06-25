@@ -1,0 +1,14 @@
+a = (input())
+b = (input())
+c = (input())
+
+a_len = len(a)
+b_len = len(b)
+c_len = len(c)
+
+if a_len > b_len and a_len > c_len:
+    print(a)
+elif b_len > a_len and b_len > c_len:
+    print(b)
+else:
+    print(c)
