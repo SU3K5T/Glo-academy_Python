@@ -1,0 +1,6 @@
+a = input()
+
+if '@' and '.' in a:
+    print('Корректный')
+else:
+    print('Некорректный')
