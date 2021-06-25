@@ -1,0 +1,6 @@
+a = input()
+
+if 'Glo Academy' in a:
+    print('YES')
+else:
+    print('NO')
