@@ -1,0 +1,12 @@
+a = 1
+count_min = 0
+count_pl = 0
+
+while a != 0:
+    a = int(input())
+    if a < 0:
+        count_min += 1
+    if a > 0:
+        count_pl += 1
+
+print(count_pl*count_min)
