@@ -1,0 +1,15 @@
+a = int(input())
+mnmx = a % 10
+z = 0
+mx = mnmx
+mn = mnmx
+
+while a != 0:
+    z = a % 10
+    if z > mx:
+        mx = z
+    if z < mn:
+        mn = z
+    a //= 10
+
+print('Максимальная цифра равна ', mx, '\n' 'Минимальная цифра равна ', mn)
