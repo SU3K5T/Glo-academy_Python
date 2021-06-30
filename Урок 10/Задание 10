@@ -1,0 +1,11 @@
+a = input()
+counter = 0
+
+for i in range(len(a)):
+    if a[i] == ' ':
+        counter += 1
+
+if len(a) > 0:
+    print(counter + 1)
+else:
+    print('0')
