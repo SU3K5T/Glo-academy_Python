@@ -1,0 +1,8 @@
+td = input()
+ft = input()
+sd = input()
+
+sd = sd[:1]
+ft = ft[:1]
+
+print(f'{td} {ft}.{sd}.')
