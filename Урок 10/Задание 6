@@ -1,0 +1,8 @@
+a = input()
+total = ''
+
+for i in range(len(a)):
+    if a[i].isdigit():
+        total += a[i]
+
+print(total)
