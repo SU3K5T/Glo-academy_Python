@@ -1,0 +1,7 @@
+a = input()
+a = ord(a)
+
+if 1040 <= a <= 1071 or a == 1025:
+    print('YES')
+else:
+    print('NO')
