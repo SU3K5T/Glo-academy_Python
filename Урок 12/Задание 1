@@ -1,0 +1,20 @@
+def product(first, second):
+
+    counter_first = 0
+    counter_second = 0
+
+    while first != 0:
+        first //= 10
+        counter_first += 1
+
+    while second != 0:
+        second //= 10
+        counter_second += 1
+
+    composition = counter_first * counter_second
+
+    return composition
+
+a = int(input())
+b = int(input())
+print(product(a, b))
