@@ -1,0 +1,21 @@
+def days_count(mounth):
+
+    a = 0
+
+    if mounth == 4 or mounth == 6 or mounth == 9 or mounth == 11:
+
+        a = 30
+
+    elif mounth == 2:
+
+        a = 28
+
+    else:
+
+        a = 31
+
+    return a
+
+num = int(input())
+
+print(days_count(num))
