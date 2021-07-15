@@ -1,0 +1,11 @@
+a = input()
+a = a.split(' ')
+b = []
+counter = 0
+
+for i in range(len(a)):
+    if a.count(a[i]) == 1:
+        b.append(a[i])
+
+
+print(*b)
