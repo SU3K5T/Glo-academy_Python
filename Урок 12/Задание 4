@@ -1,0 +1,12 @@
+def price(item):
+
+    default_price = 100
+
+    for i in range(item-1):
+
+        default_price += 50
+
+    return default_price
+
+a = int(input())
+print(price(a))
