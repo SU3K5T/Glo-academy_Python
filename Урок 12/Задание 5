@@ -1,0 +1,13 @@
+def star_date(date_in):
+
+    date_in = date_in.split('.')
+    flag = 'False'
+
+
+    if (int(date_in[0]) * int(date_in[1])) == (int(date_in[2]) % 100):
+        flag = 'True'
+
+    return flag
+
+a = input()
+print(star_date(a))
