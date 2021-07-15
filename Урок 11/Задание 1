@@ -1,0 +1,12 @@
+n = int(input())
+values = []
+
+for i in range(n):
+    values.append(input())
+
+user_in = input()
+
+for j in range(n):
+    if user_in.lower() in values[j].lower():
+        print(values[j])
+        break
