@@ -23,7 +23,7 @@ flag = 1
 
 
 
-while flag == 1:
+while True:
 
     print('Введите число от 1 до 100')
     user_input = input()
