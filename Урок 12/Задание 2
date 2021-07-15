@@ -1,0 +1,26 @@
+def product(list_f, list_s):
+
+    list_f = list_f.split(' ')
+    list_s = list_s.split(' ')
+
+    mx_f = int(list_f[0])
+    mx_s = int(list_s[0])
+
+    for i in range(len(list_f)):
+        list_f[i] = int(list_f[i])
+        if mx_f < list_f[i]:
+            mx_f = list_f[i]
+
+    for j in range(len(list_s)):
+        list_s[j] = int(list_s[j])
+        if mx_s < list_s[j]:
+            mx_s = list_s[j]
+
+    composition = mx_f * mx_s
+
+    return composition
+
+a = input()
+b = input()
+
+print(product(a, b))
