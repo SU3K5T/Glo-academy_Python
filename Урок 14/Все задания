@@ -9,7 +9,7 @@ def validate_start(num):
 
     if num.isdigit():
         num = int(num)
-        if num > 1:
+        if num >= 1:
             return True
         else:
             return False
