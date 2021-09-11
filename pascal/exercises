@@ -1,0 +1,280 @@
+---------1
+var count, min, i, x, m:integer;
+begin
+    count := 0;
+    min := 10000;
+    for i:= 1000 to 9999 do 
+        begin
+            m := i;
+            x := 0;
+            while m > 0 do 
+                begin
+                  m := m div 5;
+                  x := x + 1;
+                end;
+            if (x >= 6) and (((i mod 5 = 1) and ((i div 5)mod 5 = 2)) or ((i mod 5 = 3) and ((i div 5)mod 5 = 2))) then
+                    begin
+                      count := count + 1;
+                      if i < min then
+                        min := i;
+                    end;
+                    
+        end;
+    writeln(count, ' ', min);
+end.
+
+—————————————————————————————2
+
+var i, count, max, m, x:integer;
+
+begin
+  count := 0;
+  
+  for i := 1000 to 9999 do 
+    
+    begin
+      m := i;
+      x := 0;
+
+      while m > 0 do 
+        begin
+          m := m div 6;
+          inc(x); 
+        end;
+
+        if (x <= 5) and ((( i div 6)mod 6 = 1) and (i mod 6 = 3) or (( i div 6)mod 6 = 1) and (i mod 6 = 4)) then
+            begin
+              inc(count);
+              max := i;
+            end;
+    end;
+
+    writeln(count, ' ', max);
+
+end.
+
+
+
+———————————————3
+
+
+var count, min, i, x, m, max:integer;
+begin
+    count := 0;
+    min := 10000;
+    for i:= 1000 to 9999 do 
+        begin
+            m := i;
+            x := 0;
+            while m > 0 do 
+                begin
+                  m := m div 3;
+                  x := x + 1;
+                end;
+            if (x = 8) and (i mod 5 <> 0) and (i mod 7 <> 0) and (i mod 11 <> 0) then
+                    begin
+                      max := i;
+                      if i < min then
+                        min := i;
+                    end;
+                    
+        end;
+    writeln(min, ' ', max);
+end.
+
+——————————4
+
+
+var count, min, i, x, m, max:integer;
+begin
+    count := 0;
+    min := 10000;
+    for i:= 1000 to 9999 do 
+        begin
+            m := i;
+            x := 0;
+            while m > 0 do 
+                begin
+                  m := m div 4;
+                  x := x + 1;
+                end;
+            if (x = 6) and (i mod 5 <> 0) and (i mod 17 <> 0) and (i mod 19 <> 0) then
+                    begin
+                      max := i;
+                      if i < min then
+                        min := i;
+                    end;
+                    
+        end;
+    writeln(min, ' ', max);
+end.
+
+
+
+————————————5
+
+
+
+var count, min, i, max, sr:integer;
+begin
+    count := 0;
+    min := 10000;
+    for i:= 1476 to 7039 do 
+        begin
+            
+            
+            if (i mod 2 = 0) and (i mod 16 <> 0) and (((i div 10)mod 10) >= 4) then
+                    
+                    begin
+                      count := count + 1;
+                      max := i;
+                      if i < min then
+                        min := i;
+                    end;
+                    
+        end;
+    writeln(count, ' ', (max + min) div 2);
+end.
+
+
+
+
+——————————6
+
+
+var count, min, i, max, sr:integer;
+begin
+    count := 0;
+    min := 10000;
+    for i:= 2476 to 7857 do 
+        begin
+            
+            
+            if (i mod 2 = 0) and (i mod 8 <> 0) and (((i div 100)mod 10) <= 7) then
+                    
+                    begin
+                      count := count + 1;
+                      max := i;
+                      if i < min then
+                        min := i;
+                    end;
+                    
+        end;
+    writeln(count, ' ', (max + min) div 2);
+end.
+
+
+
+—————————7
+
+
+
+var count, min, i:integer;
+begin
+    count := 0;
+    min := 10000;
+    for i:= 3905 to 7998 do 
+        begin
+            
+            
+            if (((i div 10)mod 10) <> 0) and (((i div 10)mod 10) <> 5) and (((i div 100)mod 10) >= 2) and (((i div 100)mod 10) <= 6) then
+                    
+                    begin
+                      count := count + 1;
+                      if i < min then
+                        min := i;
+                    end;
+                    
+        end;
+    writeln(count, ' ', min);
+end.
+
+
+
+————————8
+
+
+var count, i, max:integer;
+begin
+    count := 0;
+
+    for i:= 2461 to 9719 do 
+        begin
+            
+            
+            if (((i div 10)mod 10) >= 3) and (((i div 10)mod 10) <= 7) and (((i div 100)mod 10) <> 1) and (((i div 100)mod 10) <> 9) then
+                    
+                    begin
+                      count := count + 1;
+                      max:=i;
+                    end;
+                    
+        end;
+    writeln(count, ' ', max);
+end.
+
+------------9
+var count, i, x, m, max,b,l:integer;
+begin
+    count := 0;
+
+    for i:= 3466 to 9081 do 
+        begin
+            m := i;
+            b := i;
+            x := 0;
+            l := 0;
+            while m > 0 do 
+                begin
+                  m := m div 8;
+                  x := x + 1;
+                end;
+            while b > 0 do 
+                begin
+                  b := b div 10;
+                  l := l + 1;
+                end;
+            if (x <> l) and ((i mod 7 = 1) or (i mod 7 = 5)) then
+                    begin
+                      max := i;
+                      inc(count);
+                    end;
+                    
+        end;
+    writeln(count, ' ', max);
+end.
+
+-------------10
+
+var count, i, x, m, min,b,l:integer;
+begin
+    count := 0;
+    min := 10000;
+    for i:= 1871 to 9197 do 
+        begin
+            m := i;
+            b := i;
+            x := 0;
+            l := 0;
+            while m > 0 do 
+                begin
+                  m := m div 16;
+                  x := x + 1;
+                end;
+            while b > 0 do 
+                begin
+                  b := b div 10;
+                  l := l + 1;
+                end;
+            if (x <> l) and ((i mod 9 = 2) or (i mod 9 = 4)) then
+                    begin
+                      if i < min then
+                        min := i;
+
+                      inc(count);
+                    end;
+                    
+        end;
+    writeln(count, ' ', min);
+end.
+
