@@ -1,0 +1,537 @@
+----============================================================--1
+
+var count, max, i, x, m, k, h:integer;
+begin
+    count := 0;
+
+    for i:= 127 to 9852 do 
+        begin
+            m := i;
+            x := 0;
+            h := 0;
+            k := i;
+            while m > 0 do 
+                begin
+                  m := m div 10;
+                  x := x + 1;
+                end;
+            while k > 0 do
+                begin
+                  k := k div 8;
+                  h := h + 1;
+                end;
+
+            if (h = x) and (i mod 3 = 0) and (i mod 9 <> 0) then
+                    begin
+                      count := count + 1;
+                      max := i;
+                    end;
+                    
+        end;
+    writeln(count, ' ', max);
+end.
+
+
+===========================================================================================================2
+
+var count, min, i, x, m, k, h:integer;
+begin
+    count := 0;
+    min := 10000;
+    for i:= 331 to 8751 do 
+        begin
+            m := i;
+            x := 0;
+            h := 0;
+            k := i;
+            while m > 0 do 
+                begin
+                  m := m div 10;
+                  x := x + 1;
+                end;
+            while k > 0 do
+                begin
+                  k := k div 16;
+                  h := h + 1;
+                end;
+
+            if (h = x) and (i mod 5 = 0) and (i mod 25 <> 0) then
+                    begin
+                      count := count + 1;
+                      if i < min then 
+                        min := i;
+                    end;
+                    
+        end;
+    writeln(count, ' ', min);
+end.
+
+==================================================================3  конец
+
+---
+
+=================================================================4.  -----косяк
+
+var count, max, i, x, m, k, h:int64;
+begin
+    count := 0;
+
+    for i:= 1000 to 70000 do 
+        begin
+            m := i;
+            x := 0;
+            h := 0;
+            k := i;
+            while m > 0 do 
+                begin
+                  m := m div 8;
+                  x := x + 1;
+                end;
+            while k > 0 do
+                begin
+                  k := k div 5;
+                  h := h + 1;
+                end;
+
+            if (x = 5) and (h = 6) and ((i div 16 = 0)mod 16 = $F) and (i mod 16 = $A) then
+                    begin
+                      count := count + 1;
+                      max := i;
+                    end;
+                    
+        end;
+    writeln(count, ' ', max);
+end.
+
+================================================================5
+
+
+var count, max, i, min, s:int64;
+begin
+    min := 10000;
+    s := 0;
+    for i:= 10 to 1178 do 
+        begin
+
+            if i mod 2 = 0 then
+                    begin
+                      if (i mod 10 <> 0) and (i mod 10 <> 2) and (i mod 10 <> 6) and (i mod 10 <> 8) and (i mod 100 <> 14) then
+                      begin
+                        s := i + s;
+                        if i < min then
+                            min := i;
+                      end;
+                        
+                    end;
+                    
+        end;
+    writeln(min, ' ', s);
+end.
+
+
+=====================================================================================6
+
+
+var count, , i, count, s:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 2595 to 8401 do 
+        begin
+
+
+
+                      if (i mod 2 = 0) and (i mod 13 <> 2) then
+                      begin
+                        s := i + s;
+                        count := count + 1;
+                      end;
+                        
+
+                    
+        end;
+    writeln(count, ' ', s);
+end.
+
+=====================================================================================7 
+
+var count, i, s:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 1753 to 7420 do 
+        begin
+
+
+
+                      if (i mod 11 = 0) and (i mod 13 <> 0) then
+                      begin
+                        s := i + s;
+                        count := count + 1;
+                      end;
+                        
+
+                    
+        end;
+    writeln(count, ' ', s);
+end.
+
+====================================================================================8
+
+var count, i, s:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 1905 to 9868 do 
+        begin
+
+
+
+                      if (i mod 3 = 0) and (i mod 23 <> 0) then
+                      begin
+                        s := i + s;
+                        count := count + 1;
+                      end;
+                        
+
+                    
+        end;
+    writeln(count, ' ', s);
+end.
+
+
+=================================================================9
+
+var count, i, s:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 1346 to 7996 do 
+        begin
+
+
+
+                      if (i mod 3 = 0) and (i mod 13 <> 0) then
+                      begin
+                        s := i + s;
+                        count := count + 1;
+                      end;
+                        
+
+                    
+        end;
+    writeln(count, ' ', s);
+end.
+
+=================================================================10 
+
+var count, i, s:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 1705 to 7474 do 
+        begin
+
+
+
+                      if (i mod 11 = 0) and (i mod 19 <> 0) then
+                      begin
+                        s := i + s;
+                        count := count + 1;
+                      end;
+                        
+
+                    
+        end;
+    writeln(count, ' ', s);
+end.
+
+============================================11
+
+var count, i, s:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 1213 to 8310 do 
+        begin
+
+
+
+                      if (i mod 3 = 0) and (i mod 23 <> 0) then
+                      begin
+                        s := i + s;
+                        count := count + 1;
+                      end;
+                        
+
+                    
+        end;
+    writeln(count, ' ', s);
+end.
+
+=======================12
+
+var count, i, s:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 1389 to 9345 do 
+        begin
+
+
+
+                      if (i mod 2 = 0) and (i mod 19 <> 0) then
+                      begin
+                        s := i + s;
+                        count := count + 1;
+                      end;
+                        
+
+                    
+        end;
+    writeln(count, ' ', s);
+end.
+
+======================================================13
+
+var count, i, s:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 2738 to 7514 do 
+        begin
+
+
+
+                      if (i mod 7 = 0) and (i mod 19 <> 0) then
+                      begin
+                        s := i + s;
+                        count := count + 1;
+                      end;
+                        
+
+                    
+        end;
+    writeln(count, ' ', s);
+end.
+
+===========================================14 
+
+var count, i, s:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 1361 to 7724 do 
+        begin
+
+                      if (i mod 2 = 0) and (i mod 19 <> 0) then
+                      begin
+                        s := i + s;
+                        count := count + 1;
+                      end;
+        end;
+    writeln(count, ' ', s);
+end.
+
+===========================================15
+
+var count, i, s:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 1840 to 9052 do 
+        begin
+
+                      if (i mod 7 = 0) and (i mod 23 <> 0) then
+                      begin
+                        s := i + s;
+                        count := count + 1;
+                      end;
+        end;
+    writeln(count, ' ', s);
+end.
+
+=============================================16
+
+var count, i, max:int64;
+begin
+    count := 0;
+
+    for i:= 4563 to 7912 do 
+        begin
+
+                      if (i mod 7 = 0) and ((i div 1000 + i mod 10) > 10) then
+                      begin
+                        max := i;
+                        count := count + 1;
+                      end;
+        end;
+    writeln(count, ' ', max);
+end.
+
+===========================17
+
+var count, i, max, pr, m, flag:int64;
+begin
+    count := 0;
+    
+    for i:= 8800 to 55535 do 
+        begin
+        m := i;
+        pr := 1;
+        flag := 0;
+        while m > 0 do 
+            begin
+                pr := pr * (m mod 10);
+                if m mod 10 = 7 then 
+                    flag := 1;
+                m := m div 10;
+                
+            end;
+                      if (pr > 35) and (flag = 1) then
+                      begin
+                        max := i;
+                        count := count + 1;
+                      end;
+        end;
+    writeln(count, ' ', max);
+end.
+
+==========================18 косяк
+
+var count, i, max, m, flag:int64;
+begin
+    count := 0;
+    
+    for i:= 333666 to 666999 do 
+        begin
+        m := i;
+        flag := 0;
+        while m > 0 do 
+            begin
+               
+                if m mod 10 = 7 then 
+                    flag := flag + 1;
+                m := m div 10;
+                
+            end;
+                      if (i mod 17 = 0) and (flag = 2) then
+                      begin
+                        max := i;
+                        count := count + 1;
+                      end;
+        end;
+    writeln(count, ' ', max);
+end.
+
+=======================19. косяк
+
+
+var count, i, max:int64;
+begin
+    count := 0;
+    
+    for i:= 100001 to 900009 do 
+        begin
+  
+                      if ((i mod 7 + (i div 10 mod 10) + i mod 10) = 10) and (i mod 11 = 0) and (i mod 55 <> 0)then
+                      begin
+                        max := i;
+                        count := count + 1;
+                      end;
+        end;
+    writeln(count, ' ', max);
+end.
+
+
+======================= 20
+
+var count, i, min, m, x, y, z:int64;
+begin
+    count := 0;
+    min := 50000;
+    for i:= 2079 to 43167 do 
+        begin
+            m := i;
+            x := 0;
+            y := 0;
+            z := 0;
+            while m > 0 do
+            begin
+              if m mod 10 = 0 then
+                z := 1; 
+              if m mod 10 = 2 then
+                x := 1;
+              if m mod 10 = 5 then
+                y := 1;
+              
+              m := m div 10;
+
+            end;
+                      if (i mod 7  = 0) and (x  = 1) and (y = 1) and (z = 1)then
+                      begin
+                        if i < min then
+                             min := i;
+                        count := count + 1;
+                      end;
+        end;
+    writeln(count, ' ', min);
+end.
+
+===============================21
+
+var count, i, max, m, x,  z:int64;
+begin
+    count := 0;
+
+    for i:= 1388 to 63252 do 
+        begin
+            m := i;
+            x := 0;
+
+            z := 0;
+            while m > 0 do
+            begin
+              if m mod 10 = 7 then
+                z := 1; 
+              if m mod 10 = 4 then
+                x := 1;
+            
+              
+              m := m div 10;
+
+            end;
+                      if (i mod 12 <> 0) and ((x  = 1) or (z = 1)) then
+                      begin
+
+                             max := i;
+                        count := count + 1;
+                      end;
+        end;
+    writeln(count, ' ', max);
+end.
+
+========================22
+
+var count, i, max, m, s:int64;
+begin
+    count := 0;
+
+    for i:= 2894 to 174882 do 
+        begin
+            m := i;
+            s := 0;
+                      if (i mod 10 <> 8)then
+                      begin
+                        while (m > 0) do 
+                            begin 
+                            
+                             max := i;
+                        count := count + 1;
+                      end;
+        end;
+    writeln(count, ' ', max);
+end.
+
+
+=======нет 71....
