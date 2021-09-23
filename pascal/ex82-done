@@ -1,0 +1,28 @@
+var count, max, m, s, i, x:int64;
+begin
+    count := 0;
+    for i:= 9999 to 99999 do 
+        begin
+            m := i;
+            x := 0;
+            s := 0;
+
+            while m > 0 do 
+            begin
+                x := m mod 10;
+                s := s + x;
+                m := m div 10;
+            end;
+           
+            if (i mod s = 0) then
+            begin
+               max := i;
+               count := count + 1;
+            end;
+               
+           
+        end;
+    writeln(count, ' ', max);
+end.
+
+
