@@ -1,0 +1,19 @@
+var count, i, s, m:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= -999 to 999 do 
+        begin
+           m := abs(i);
+            if (m mod 16 = $F) and (m mod 12 <> 0) and (m mod 13 <> 0) then
+            begin
+               s := s + i;
+               count := count + 1;
+            end;
+               
+           
+        end;
+    writeln(count, ' ', s);
+end.
+
+
