@@ -1,0 +1,34 @@
+var count, max, m, x, s, flag, i, min, m2, x2, s2:int64;
+begin
+    count := 0;
+    min := 605000
+    for i:= 138 to 603884 do 
+        begin
+            m := i;
+            x := 0;
+            x2 := 0;
+            flag := 0;
+            while m > 0 do 
+            begin
+                x := m mod 10;
+                s := x + s;
+                m := m div 10;
+            end;
+            if i < min then
+                min := i;
+            m2 := min
+            while m2 > 0 do 
+            begin
+                x2 := m2 mod 10;
+                s2 := x2 + s2;
+                m2 := m2 div 10;
+            end;
+            if (i ** 1/3 = trunc(i)) and  then
+                
+                count := count + 1;
+           
+        end;
+    writeln(count, ' ', max);
+end.
+
+
