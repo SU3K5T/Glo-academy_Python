@@ -1,0 +1,22 @@
+var count, i, s:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 697 to 3458 do 
+        begin
+
+            
+           
+           
+            if (i mod 16 = $E) and ((i mod 7) = (i mod 8))  then
+            begin
+               s := s + i;
+               count := count + 1;
+            end;
+               
+           
+        end;
+    writeln(count, ' ', s);
+end.
+
+
