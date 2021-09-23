@@ -1,0 +1,22 @@
+var count, i, s:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 99 to 999 do 
+        begin
+
+            
+           
+           
+            if (i mod 16 = 9) and (i mod 9 = 8)  then
+            begin
+               s := s + i;
+               count := count + 1;
+            end;
+               
+           
+        end;
+    writeln(count, ' ', s);
+end.
+
+
