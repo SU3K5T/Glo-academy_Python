@@ -1,0 +1,26 @@
+var count, max, m, x, s, i:int64;
+begin
+    count := 0;
+    for i:= 1007 to 746001 do 
+        begin
+            m := i;
+            x := 0;
+            s := 0;
+
+            while m > 0 do 
+            begin
+                x := m mod 10;
+                if m mod 10 = 5 then
+                    s := x + s;
+                m := m div 10;
+            end;
+           
+            if (s > 0) and (s mod 2 = 0) then
+                
+                count := count + 1;
+           
+        end;
+    writeln(count, ' ', max);
+end.
+
+
