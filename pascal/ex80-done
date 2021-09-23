@@ -1,0 +1,30 @@
+  
+var count, max, flag, m, d:int64;
+begin
+    count := 0;
+    var i := 27;
+    flag := 0;
+    while i <= 900000 do 
+        begin
+          var a:=i;
+          while (a<>0) do
+            begin
+           m := a mod 10;
+           d := a div 10;
+           while d <> 0 do 
+           begin
+             if (m = d mod 10) then
+               flag := 1;
+              d := d div 10;
+           end;
+           a:=a div 10;
+           end;
+           if flag = 0 then 
+           begin
+             inc(count);
+             max := i;
+           end;
+           i := i * 2
+        end;
+    writeln(count, ' ', max);
+end.
