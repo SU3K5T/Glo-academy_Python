@@ -1,0 +1,22 @@
+var count, i, s:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 100 to 1000 do 
+        begin
+
+            
+           
+           
+            if (i mod 16 = 0) and (i mod 3 <> 0)  then
+            begin
+               s := s + i;
+               count := count + 1;
+            end;
+               
+           
+        end;
+    writeln(count, ' ', s);
+end.
+
+
