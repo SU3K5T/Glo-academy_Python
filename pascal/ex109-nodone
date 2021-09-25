@@ -1,0 +1,26 @@
+var count, i, sr, s, d, j:int64;
+begin
+    count := 0;
+    s := 0;
+    for i:= 56123 to 97354 do 
+        begin
+             d := 0;
+            for j := 1 to i do 
+            begin
+              if i mod j = 0 then
+                inc(d);
+            end;
+            if (d > 35) then
+            begin
+               s := s + i;
+               count := count + 1;
+            end;
+               
+           
+        end;
+        sr := s div count;
+       
+    writeln(count, ' ', sr);
+end.
+
+
