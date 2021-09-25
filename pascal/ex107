@@ -1,0 +1,26 @@
+var count, i, min, d, j:int64;
+begin
+    count := 0;
+    min := 65000;
+    for i:= 23561 to 64354 do 
+        begin
+
+        d := 0;
+            for j := 1 to i do 
+            begin
+              if i mod j = 0 then
+                inc(d);
+            end;
+            if (d > 20) then
+            begin
+               if i < min then 
+               min := i;
+               count := count + 1;
+            end;
+               
+           
+        end;
+    writeln(count, ' ', min);
+end.
+
+
