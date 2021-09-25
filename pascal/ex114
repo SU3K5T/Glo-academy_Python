@@ -1,0 +1,34 @@
+var count, i, m,  flag, x, max, min, xflag:int64;
+begin
+    count := 0;
+    min := 33230;
+    for i:= 9919 to 21987 do 
+        begin
+
+            m := i;
+            flag := 0;
+            xflag := 0;
+            while m > 0 do 
+            begin
+                x := m mod 10;
+                if x < 3 then
+                    flag := 1;
+                if x = 3 then
+                    xflag := 1;
+                m := m div 10;
+            end;
+            if (flag = 0) and ((i mod 3 = 0) or (i mod 2 = 0)) and (xflag = 1) and (i mod 16 <> 0) then
+            begin
+               max := i;
+               if i < min then
+                min := i;
+               count := count + 1;
+            end;
+               
+           
+        end;
+       
+    writeln(count, ' ', max-min);
+end.
+
+
