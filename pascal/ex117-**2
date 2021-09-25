@@ -1,0 +1,21 @@
+var count, i, j, s, min, max:int64;
+begin
+    count := 0;
+    min := 555556;
+    for i:= 100 to 555555 do 
+        begin
+            s := 0;
+
+            if (((i mod 16 div 16 = $F) and (i mod 16 = $F)) or (i mod 16 = $A)) and (i mod 6 = 0) then
+            begin
+               if i < min then
+                min := i;
+               count := count + 1;
+            end;
+               
+           
+        end;
+       
+    writeln(count, ' ', min**2);
+end.
+
