@@ -1,0 +1,28 @@
+var count, i, j, s, min, max:int64;
+begin
+    count := 0;
+    min := 3230;
+    for i:= 123 to 1151 do 
+        begin
+            s := 0;
+
+            for j := 2 to i - 1 do 
+            begin
+              if i mod j = 0 then
+                s := s + j;
+            end;
+            if (s > 40) and (i mod 5 <> 0) then
+            begin
+               max := i;
+               if i < min then
+                min := i;
+               count := count + 1;
+            end;
+               
+           
+        end;
+       
+    writeln(count, ' ', max-min);
+end.
+
+
