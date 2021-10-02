@@ -7,7 +7,7 @@ begin
     for i:= 4855 to 7856 do 
         begin
            
-            if (i mod 6 = 0) and (i mod 15 = 0) and (i mod 7 <> 0) and (i mod 16 <> 0) and ( ( (i mod 10) + ((i div 10) mod 10) ) mod 2 = 0) then
+            if (i mod 6 = 0) and (i mod 15 = 0) and (i mod 7 <> 0) and (i mod 16 <> 0) and ( ( ( ((i div 10) mod 10) + ((i div 100) mod 10) ) mod 2) = 0) then
             begin
             max := i;
             inc(count);
@@ -21,5 +21,3 @@ begin
         end;
     writeln(trunc(max + min + trunc(s / count)));
 end.
-
-
