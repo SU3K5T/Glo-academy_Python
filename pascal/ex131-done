@@ -1,0 +1,19 @@
+var i, max, min:int64;
+begin
+    min := 14000;
+    for i:= 3521 to 13019 do 
+        begin
+            if ((i mod 6 = 0) and (i mod 15 = 0))  and (i mod 9 <> 0) and (i mod 12 <> 0) and (i mod 17 <> 0) and (i mod 21 <> 0) then
+            begin
+             max := i;
+               if i < min then
+                min := i;
+            end;
+               
+           
+        end;
+       
+    writeln(max, ' ', min);
+end.
+
+
