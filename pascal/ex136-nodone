@@ -1,0 +1,25 @@
+var i, min, count, max, s:int64;
+begin
+
+    min := 11754;
+    count := 0;
+    s := 0;
+    for i:= 4855 to 7856 do 
+        begin
+           
+            if (i mod 6 = 0) and (i mod 15 = 0) and (i mod 7 <> 0) and (i mod 16 <> 0) and ( ( (i mod 10) + ((i div 10) mod 10) ) mod 2 = 0) then
+            begin
+            max := i;
+            inc(count);
+            s := s + i;
+             if i < min then
+                min := i;
+           
+            end;
+               
+           
+        end;
+    writeln(trunc(max + min + trunc(s / count)));
+end.
+
+
