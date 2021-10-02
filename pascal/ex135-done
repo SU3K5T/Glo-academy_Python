@@ -1,0 +1,26 @@
+var i, min, m, max:int64;
+begin
+
+    min := 11754;
+
+    for i:= 1812 to 9285 do 
+        begin
+            m := i;
+            while m > 10 do 
+                begin
+                    m := m div 10;
+                end;
+            if ((i mod 8 = 0) or (i mod 19 = 0))  and (i mod 4 <> 0) and (i mod 9 <> 0) and (m mod 2 <> 0) then
+            begin
+            max := i;
+             if i < min then
+                min := i;
+
+            end;
+               
+           
+        end;
+    writeln(min, ' ', max);
+end.
+
+
