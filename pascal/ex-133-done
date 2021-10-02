@@ -1,0 +1,19 @@
+var i, count, min:int64;
+begin
+    count := 0;
+    min := 11754;
+    for i:= 5913 to 11753 do 
+        begin
+            if ((i mod 5 = 0) and (i mod 11 = 0))  and (i mod 7 <> 0) and (i mod 10 <> 0) and (i mod 13 <> 0) and (i mod 22 <> 0) then
+            begin
+             inc(count);
+             if i < min then
+                min := i;
+            end;
+               
+           
+        end;
+    writeln(count, ' ', min);
+end.
+
+
