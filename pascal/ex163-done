@@ -1,0 +1,20 @@
+###
+
+var a := ReadLines('C:\Users\user\Desktop\Новая папка (2)\ege2022kp\17data\17-3.txt').Select(t -> t.ToInteger).ToArray;
+
+var count := 0;
+var max := -2000000;
+var s := 0;
+for var i := 0 to a.Cnt-2 do 
+begin
+  if ((a[i] mod 2 = 0) and (a[i] mod 4 = 0)) and ((a[i+1] mod 2 <> 0) and (a[i+1] mod 11 = 0)) or  ((a[i+1] mod 2 = 0) and (a[i+1] mod 4 = 0)) and ((a[i] mod 2 <> 0) and (a[i] mod 11 = 0))  then
+  begin
+    s := a[i] + a[i + 1];
+    count += 1;
+    if s > max then
+      max := s;
+  end;
+   
+end;
+
+print(count, max)
