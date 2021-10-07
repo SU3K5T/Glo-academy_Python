@@ -1,0 +1,18 @@
+###
+
+var a := ReadLines('\\Mac\Home\Desktop\помойка\да ну нахуй\17data\17-1.txt').Select(t -> t.ToInteger).ToArray;
+
+var length := 1;
+var maxLength := 0;
+
+for var i := 1 to a.Cnt-2 do 
+begin
+  if a[i] < a[i + 1] then
+  begin
+    length := lenght + 1;
+    if length > maxLength then
+      maxLength := length;
+     
+  end;
+end.
+
