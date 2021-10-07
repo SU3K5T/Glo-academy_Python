@@ -1,0 +1,14 @@
+###
+
+var a := ReadLines('\\Mac\Home\Desktop\помойка\да ну нахуй\17data\17-2.txt').Select(t -> t.ToInteger).ToArray;
+
+var min := 20000;
+var pos := 0;
+for var i := 1 to a.Cnt-2 do 
+begin
+  if a[i] < min then
+    min := a[i];
+    pos := i;
+end;
+
+print(min, pos)
