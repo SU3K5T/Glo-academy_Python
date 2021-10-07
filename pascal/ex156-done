@@ -1,0 +1,19 @@
+###
+
+var a := ReadLines('C:\Users\user\Desktop\Новая папка (2)\ege2022kp\17data\17-2.txt').Select(t -> t.ToInteger).ToArray;
+var k,p:integer;
+var max := a[0];
+
+for var i := 1 to a.Cnt-2 do 
+begin
+  if a[i] > max then
+    max := a[i];
+end;
+
+for var i := a.Cnt-2  downto 1 do
+if a[i]=max then
+  begin
+  k+=1;
+p:=i+1;
+end;
+print(k,p);
