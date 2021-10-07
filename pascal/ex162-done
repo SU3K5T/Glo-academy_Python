@@ -1,0 +1,19 @@
+###
+
+var a := ReadLines('C:\Users\user\Desktop\Новая папка (2)\ege2022kp\17data\17-3.txt').Select(t -> t.ToInteger).ToArray;
+
+var count := 0;
+var min := 2000000;
+for var i := 0 to a.Cnt-2 do 
+begin
+  var sr := trunc((a[i] + a[i + 1]) / 2);
+  if ((a[i] * a[i + 1]) mod 2 <> 0) and ((sr mod 7) = 0) then
+  begin
+    count := count + 1;
+    if sr < min then 
+      min := sr;
+  end;
+    
+end;
+
+print(min, count)
