@@ -1,0 +1,12 @@
+###
+
+var a := ReadLines('C:\Users\user\Desktop\Новая папка (2)\ege2022kp\17data\17-3.txt').Select(t -> t.ToInteger).ToArray;
+var z:=99999999999;
+var count := 0;
+for var i := 1 to a.Cnt-2 do
+  if (a[i-1] < a[i]) and (a[i] < a[i+1]) then
+  begin
+     inc(count);    
+    z:=min(z,max(a[i],a[i+1],a[i-1])-min(a[i],a[i+1],a[i-1])) 
+  end;  
+  print(count,z)
