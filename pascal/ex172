@@ -1,23 +1,15 @@
 ###
-
-var a := ReadLines('\\Mac\Home\Desktop\помойка\да ну нахуй\17data\17-4.txt').Select(t -> t.ToInteger).ToArray;
-
+uses school;
+var a := ReadLines('C:\Users\user\Desktop\Новая папка (2)\ege2022kp\17data\17-4.txt').Select(t -> t.ToInteger).ToArray;
 var count := 0;
 var max:biginteger;
-max := -999999;
-var s := 0;
+max := -999999bi;
 for var i := 0 to a.Cnt-1 do
-begin
- if ( abs(a[i] div 5 mod 5) = 1) and (abs(a[i]) mod 5 = 1) and (abs((a[i] div 2) mod 1000) = 100)and (abs(a[i] mod 2) = 1) then
+ if ( abs(a[i]) div 5 mod 5 = 1) and (a[i] mod 5 = 1) and (  bin(a[i])[bin(a[i]).cnt]='1') and (  bin(a[i])[bin(a[i]).cnt-1]='0')
+ and (  bin(a[i])[bin(a[i]).cnt-2]='0')and (  bin(a[i])[bin(a[i]).cnt-3]='1')then
  begin
-    inc(count);
+    count+=a[i];
     if a[i] > max then
       max := a[i];
- end;
-  
-end;
-  
-  
+ end;  
   print(count, max)
-   
-    
