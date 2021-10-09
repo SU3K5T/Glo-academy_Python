@@ -1,0 +1,10 @@
+###
+function F(n:integer):integer ;
+begin
+  if n = 1 then 
+    F:= 2;
+  if n > 1 then
+    F:= F(n-1) + 5 * n *n
+end;
+
+print(F(39))
