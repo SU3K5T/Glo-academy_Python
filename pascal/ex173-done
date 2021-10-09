@@ -1,0 +1,21 @@
+###
+
+var a := ReadLines('\\Mac\Home\Desktop\помойка\да ну нахуй\17data\17-4.txt').Select(t -> t.ToInteger).ToArray;
+
+var count := 0;
+
+var s := 0;
+for var i := 0 to a.Cnt-1 do
+begin
+ if ( abs(a[i] mod 3) = 0) and (abs(a[i]) mod 9 <> 0) and (abs(a[i] mod 10) >= 4 ) then
+ begin
+    inc(count);
+    s += a[i];
+ end;
+  
+end;
+  
+  var sr := trunc(s / count);
+  print(count, sr)
+   
+    
