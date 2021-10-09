@@ -1,0 +1,23 @@
+###
+
+var a := ReadLines('\\Mac\Home\Desktop\помойка\да ну нахуй\17data\17-4.txt').Select(t -> t.ToInteger).ToArray;
+
+var count := 0;
+var max := -99999999;
+var s := 0;
+for var i := 0 to a.Cnt-1 do
+begin
+ if (a[i] mod 13 = 4) and (a[i] mod 8 = 1) then
+ begin
+    if a[i] > max then
+     max := a[i];
+     
+    s := s + a[i]
+ end;
+  
+end;
+  
+  
+  print(s, max)
+   
+    
