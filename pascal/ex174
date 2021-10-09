@@ -1,0 +1,26 @@
+###
+
+var a := ReadLines('\\Mac\Home\Desktop\помойка\да ну нахуй\17data\17-4.txt').Select(t -> t.ToInteger).ToArray;
+
+var count := 0;
+var min := 9999999;
+for var i := 0 to a.Cnt-1 do
+begin
+  var flag := 0;
+  if ( abs((a[i] mod 1000 div 100)) >= 3) and ( abs((a[i] mod 1000 div 100)) <= 7) then
+    flag := 1;
+ if (abs(a[i] mod 10) <= 4 ) and (flag = 1) then
+ begin
+    inc(count);
+    if a[i] < min then
+      min := a[i]
+ end;
+  
+end;
+  
+ 
+  print(count, min);
+   
+   
+print(1234 mod 1000 div 100)
+    
