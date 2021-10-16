@@ -1,0 +1,14 @@
+###
+var a:array [-4..30] of integer;
+a[-1]:= -1;
+a[-2]:= -2;
+a[-3]:= -3;
+a[-4]:= -4;
+for var i := 1 to 30 do 
+begin
+  if (i >= 1) and (i mod 2 = 0) then
+   a[i] := i + 3 * a[i-3];
+  if (i >= 1) and (i mod 2 <> 0) then
+    a[i] := 5 * i + 2 * a[i-5]
+end;
+print(a[30])
