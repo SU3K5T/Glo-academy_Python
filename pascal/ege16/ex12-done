@@ -1,0 +1,11 @@
+###
+function f(n:integer):integer ;
+begin
+  if n < 1 then
+    f := n;
+  if (n >= 1) and (n mod 2 = 0) then
+    f := n + 3 * f(n - 3);
+  if (n >= 1) and (n mod 2 <> 0) then
+    f := 5*n + 2*f(n-5)
+end;
+print(f(30))
