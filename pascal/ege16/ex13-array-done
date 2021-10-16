@@ -1,0 +1,16 @@
+###
+var a:array [-7..61] of integer;
+a[-3] := -6;
+a[-2] := -4;
+a[-1] := -2;
+a[0] := 0;
+a[1]:= 2;
+a[2] := 4;
+for var i := 3 to 61 do 
+begin
+  if (i mod 2 = 0) then
+    a[i] := 3 * i + 5 + a[i-2];
+  if (i mod 2 <> 0) then
+    a[i] := i + 2 * a[i-6];
+end;
+print(a[61])
