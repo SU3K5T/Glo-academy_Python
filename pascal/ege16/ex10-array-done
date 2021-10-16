@@ -1,0 +1,9 @@
+###
+var a:array [1..14] of integer;
+a[14] := 23;
+a[13] := 21;
+for var i := 12 downto 1 do 
+begin
+  a[i] := 2 * a[i+2] + i - 4;
+end;
+print(a[1])
