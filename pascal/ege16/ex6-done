@@ -1,0 +1,11 @@
+###
+
+function F(n:integer):integer ;
+begin
+  if n <= 1 then 
+    F := 2;
+  if n > 1 then 
+    F := F(n-1) + F(n-2) + 4 * n
+end;
+
+print(F(24))
