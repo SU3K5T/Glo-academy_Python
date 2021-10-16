@@ -1,0 +1,9 @@
+###
+function F(n:integer):integer ;
+begin
+  if n > 15 then 
+    F := n;
+  if n <=15 then 
+    F := 2*F(n+1) + 5*N+2
+end;
+print(F(2))
