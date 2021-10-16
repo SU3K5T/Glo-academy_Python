@@ -1,0 +1,9 @@
+###
+function f(n:integer):integer ;
+begin
+  if n > 12 then
+    f := 2 * n - 5;
+  if n <= 12 then
+    f := 2 * f(n+2) + n -4
+end;
+print(f(1))
