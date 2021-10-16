@@ -1,0 +1,9 @@
+###
+var a:array [2..17] of integer;
+a[17] := 17;
+a[16] := 16;
+for var i := 15 downto 2 do 
+begin
+  a[i] := 2 * a[i+1] + 5 * i + 2;
+end;
+print(a[2])
