@@ -1,0 +1,20 @@
+procedure F  ( n: integer );
+begin
+ s+=n+1;
+ // writeln(n+1);
+  if n > 1 then begin
+   s+=n+5;
+   // writeln(n+5);
+    F(n-1);
+    F(n-2);
+  end;
+end;
+begin
+  for var i:=1 to 10000 do
+    begin
+      s:=0;
+      F(i);
+      if s>1000000 then
+        Println(i,s);
+    end;
+end.
