@@ -1,0 +1,14 @@
+var k := 0;
+procedure F( n: integer );
+begin
+  k += 1;
+  if n >= 1 then begin
+    k += 1;
+    F(n-1);
+    F(n div 2);
+  end;
+end;
+begin
+F(140);
+print(k)  
+end.
