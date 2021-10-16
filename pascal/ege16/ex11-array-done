@@ -1,0 +1,12 @@
+###
+var a:array [0..64] of integer;
+a[1] := 1;
+a[0] := 0;
+for var i := 2 to 64 do 
+begin
+  if (i > 2) and (i mod 2 = 0) then
+    a[i] := 2 * a[i-1];
+  if (i > 2) and (i mod 2 <> 0) then
+    a[i] := 5 * i + a[i-2]
+end;
+print(a[64])
