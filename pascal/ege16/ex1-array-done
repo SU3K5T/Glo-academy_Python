@@ -1,0 +1,8 @@
+###
+var F:array [1..19] of integer;
+F[1]:=1;
+for var n:=2 to 19 do
+  begin
+    F[n]:=2*F[n-1]+n+3;
+  end;
+  Print(F[19]);
