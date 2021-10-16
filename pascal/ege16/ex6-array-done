@@ -1,0 +1,9 @@
+###
+var a:array [0..24] of integer;
+a[0] := 2;
+a[1] := 2;
+for var i := 2 to 24 do 
+begin
+  a[i] := a[i-1] + a[i-2] + 4 * i
+end;
+print(a[24])
