@@ -1,0 +1,15 @@
+var k := 0;
+procedure F( n: integer );
+begin
+  k += 1;
+  if n >= 1 then begin
+    k += 1;
+    F(n-1);
+    F(n div 3);
+    k += 1;
+  end;
+end;
+begin
+F(280);
+print(k)  
+end.
