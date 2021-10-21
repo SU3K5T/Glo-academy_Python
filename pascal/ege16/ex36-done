@@ -1,0 +1,19 @@
+function F(n,m: integer): integer;
+begin
+ if m = 0 then 
+   F:= n 
+ else 
+   F:= F(m, n mod m) 
+end;
+
+begin
+  var z:=0;
+  for var i:=100 to 1000 do
+    for var j := 1 to 1000 do 
+      if F(i, j) = 30 then
+        begin
+        z+=1;
+        break;
+    end;
+    Print(z);
+end
