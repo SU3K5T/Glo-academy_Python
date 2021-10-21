@@ -1,0 +1,20 @@
+ var s := 0;
+procedure F
+    ( n: integer );
+begin
+  s += n * n;
+  if n > 1 then begin
+    s += 2*n+1;
+    F(n-2);
+    F(n div 3);
+  end;
+end;
+begin
+  for var i:=1 to 10000 do
+    begin
+      s:=0;
+      F(i);
+      if s>3200000 then
+        Println(i,s);
+    end;
+end.
