@@ -1,0 +1,20 @@
+###
+function F(n: integer): integer;
+var m,d: byte;
+begin
+ if n < 10 then F:=n 
+ else begin
+   m:= F(n div 10);
+   d:= m mod 10;
+   if m < d then F:=d 
+   else F := m
+ end
+end;
+
+for var i:=99 to 999 do
+  if (F(i) > 7) then
+  begin
+    println(F(i), i);
+
+  end;
+  
