@@ -1,0 +1,23 @@
+uses school;
+//var min:integer;
+
+function F(n,m: integer): integer;
+begin
+ if n > m then 
+  F:= F(n-m,m) 
+ else 
+  if n < m then 
+    F:= F(n,m-n) 
+  else
+    F:= n;
+end;
+begin
+  //min:=0;
+  for var i:=1 to 50 do
+  for var j := i to 50 do 
+  begin
+    if (j <> i)  and (F(j ,i) > 15)    then
+    Println(i,j,f(i,j));
+      end;
+      //Print(min);
+end.
