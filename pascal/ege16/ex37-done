@@ -1,0 +1,17 @@
+function F(n,m: integer): integer;
+begin
+ if m = 0 then 
+   F:= 1 
+ else 
+   F:= n*F(n,m-1) 
+end;
+begin
+  var k := 0;
+  for var i:=1 to 1000000 do
+    if (F(i, 2) > 99) and (F(i, 2) < 999)  then
+    begin
+      k += 1;
+    end;
+    print(k);
+end.
+  
