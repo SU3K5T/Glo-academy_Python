@@ -1,0 +1,27 @@
+
+var z,k:integer;
+function f(n: integer): integer;
+var d:integer;
+begin
+ k += 1;
+ if k = 2 then
+   z := n;
+ if n > 0 then begin
+   d := n mod 10 +F(n div 10);
+   k += 1;     
+   if k = 2 then 
+      z := d; 
+   f:=d;
+ end
+ else F:= 0; 
+end;
+begin
+for var i:=1 to 100000000 do
+begin
+  k := 0; z:=0;
+  F(i);
+  if z >51 then
+    println(i,f(i))
+  end;
+end.  
+  
