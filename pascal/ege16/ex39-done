@@ -1,0 +1,20 @@
+function G(n:integer):integer;forward;
+function F(n:integer):integer;
+begin
+  if n = 1 then begin
+      F := 1;
+     end;
+  if n > 1 then 
+    F := F(n-1) - 2 * G(n-1); 
+end;
+function G(n:integer):integer;
+begin
+  if n = 1 then 
+    G := 1;
+  if n > 1 then 
+    G := F(n-1) + 2 * G(n-1)
+end;
+begin
+  print(G(21))
+end.
+
