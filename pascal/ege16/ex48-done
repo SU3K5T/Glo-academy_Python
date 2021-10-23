@@ -1,0 +1,15 @@
+###
+var a:array [1..10000] of int64;
+for var x:=1 to 3 do
+  a[x] := x;
+var k := 0;
+for var i:=1 to 10000 do
+  begin
+  if (i > 3) and (i mod 2 = 0) then 
+    a[i] := i + a[i-1]; 
+  if (i > 3) and (i mod 2 <> 0) then
+    a[i] := i * i + a[i-2];
+  if (a[i] >0) and (a[i] < 100000000) then
+    k+=1;
+  end;
+  print(k)
