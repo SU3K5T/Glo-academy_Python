@@ -1,0 +1,15 @@
+###
+var a:array [1..1000] of integer;
+var k := 0;
+for var i := 1 to 1000 do 
+begin
+  if i <=3 then
+    a[i] := i;
+  if (i mod 2 = 0) and (i > 3) then
+    a[i] := i + 3 + a[i - 1];
+  if (i mod 2 <> 0) and (i > 3) then 
+    a[i] := i * i + a[i - 2];
+  if (a[i] mod 7 = 0) then 
+    k += 1;
+end;
+print(k)
