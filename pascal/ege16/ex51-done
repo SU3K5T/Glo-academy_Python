@@ -1,0 +1,12 @@
+###
+var a:array [0..84] of int64;
+for var i := 0 to 84 do 
+begin
+  if i <= 1 then 
+    a[i] := i;
+  if (i > 1) and (i mod 2 = 0) then 
+    a[i] := i * a[i-1];
+  if (i > 1) and (i mod 2 <> 0) then
+    a[i] := i + a[i-2];
+end;
+print(a[84])
