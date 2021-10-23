@@ -1,0 +1,17 @@
+###
+var a:array [1..1000] of biginteger;
+for var x := 1 to 3 do 
+  a[x] := x;
+var k := 0;
+for var i:=4 to 1000 do
+  begin
+  if (i mod 2 = 0) then
+    a[i] := 2 * i * i + a[i-1];
+  if (i mod 2 <> 0) then
+    a[i] := i * i * i + i + a[i-1];
+  end;
+ for var i:=1 to 1000 do  
+ if (a[i]>0) and (a[i] < 10000000) then
+    k += 1;
+  
+print(k)
