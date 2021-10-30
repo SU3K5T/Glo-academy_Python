@@ -1,0 +1,20 @@
+function g(n:integer):integer;forward;
+function f(n:integer):integer ;
+begin
+  if n < 50 then
+    f := n;
+  if n > 49 then 
+    f := 2 * g(50 - n div 2);
+end;
+function g(n:integer):integer ;
+begin
+  if n > 40 then 
+    g := 10;
+  if n < 41 then 
+    g := 30 + f(n +600 div n);
+
+end;
+  
+begin
+print(f(80))
+end.
