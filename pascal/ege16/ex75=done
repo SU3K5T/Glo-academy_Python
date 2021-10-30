@@ -1,0 +1,15 @@
+###
+var min:=9999999999;
+var a:array [-10..100000000] of integer;
+for var i := -10 to 10000000 do 
+begin
+  if i <= 1 then
+    a[i] := i;
+ if (i > 1) and (i mod 2 = 0) then 
+    a[i] := 1 + a[i div 2];
+ if (i > 1) and (i mod 2 <> 0) then 
+    a[i] := 1 + a[i + 2];
+if (a[i]=16) and (i<min) then  
+min:=i;
+end;
+print(min)
