@@ -1,0 +1,26 @@
+###
+uses school;
+var a:array [1..1000] of biginteger;
+var k := 0;
+for var i := 1000 downto 1 do 
+begin
+  if i > 25 then 
+    a[i] := i * i + 2 * i + 1;
+  var z := a[i];
+  var flag := 0;
+  if (i <= 25) and (a[i] mod 2 = 0) then 
+    a[i] := 2 * a[i+1] + a[i+3];
+  if (i <= 25) and (a[i] mod 2 <> 0) then 
+    a[i] := a[i+2] + 3 * a[i + 5];
+  var x := a[i];
+  while x <> 0 do
+  begin
+    z := x mod 10;
+    if z = 0 then 
+      flag := 1;
+    x := x div 10;
+  end;
+  if (a[i] >0 ) and (flag = 0) then
+   k += 1;
+end;
+pr(k)
