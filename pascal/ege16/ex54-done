@@ -1,0 +1,11 @@
+###
+uses school;
+var a:array [1..30] of int64;
+for var i := 30 downto 1 do 
+begin
+  if i > 25 then 
+    a[i] := 2 * i * i * i + i * i;
+  if i <= 25 then 
+    a[i] := a[i+2] + 2 * a[i+3]
+end;
+pr(digits(a[2]).sum);
