@@ -8,9 +8,9 @@ begin
     a[i] := i * i + 2 * i + 1;
   var z := a[i];
   var flag := 0;
-  if (i <= 25) and (a[i] mod 2 = 0) then 
+  if (i <= 25) and (i mod 2 = 0) then 
     a[i] := 2 * a[i+1] + a[i+3];
-  if (i <= 25) and (a[i] mod 2 <> 0) then 
+  if (i <= 25) and (i mod 2 <> 0) then 
     a[i] := a[i+2] + 3 * a[i + 5];
   var x := a[i];
   while x <> 0 do
