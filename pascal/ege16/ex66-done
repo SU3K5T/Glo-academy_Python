@@ -5,11 +5,11 @@ var k := 0;
 for var i := 1 to 1000 do 
 begin
   var flag := 0;
-  if i <= 5 then 
+  if i <= 15 then 
     a[i] := i * i + 11;
-  if (i > 5) and (a[i] mod 2 = 0) then 
+  if (i > 15) and (i mod 2 = 0) then 
     a[i] :=a[i div 2] + i * i * i - 5 * i;
-  if (i > 5) and (a[i] mod 2 <> 0) then 
+  if (i > 15) and (i mod 2 <> 0) then 
     a[i] := a[i-1] + 2 * i + 3;
   var x := a[i];
   var z := 0;
