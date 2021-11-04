@@ -2,7 +2,7 @@
 uses school;
 var a:array [-1111..100000] of int64;
 var k := 0;
-for var i := 1 to 100000 do 
+for var i := 0 to 100000 do 
 begin
   if i < 2 then
     a[i] := 1;
