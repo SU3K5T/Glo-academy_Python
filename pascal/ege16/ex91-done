@@ -1,0 +1,16 @@
+###
+uses school;
+var min := 999988989;
+var a:array [-1111..10000000] of int64;
+for var i := -551 to 10000000 do 
+begin
+  if i < 2 then
+    a[i] := 1;
+  if (i >= 2) and (i mod 2 = 0) then
+    a[i] := a[i div 2] + 1;
+  if (i >= 2) and (i mod 2 <> 0) then
+    a[i] := a[i - 3] + 3;
+  if (a[i] = 31) and (i < min) then 
+    min := i;
+end;
+pr(min)
