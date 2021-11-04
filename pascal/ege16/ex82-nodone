@@ -1,0 +1,15 @@
+###
+var a:array [-1000..1000000] of int64;
+var max := -9999999;
+for var i := -1000 to 1000000 do 
+begin
+  if i <= 5 then
+    a[i] := i;
+  if (i > 5) and (i mod 4 = 0) then
+    a[i] := i + a[i div 2 - 1];
+  if (i > 5) and (i mod 4 <> 0) then
+    a[i] := i + a[i +2];
+  if (i > max) then 
+    max :=i;
+end;
+print(max);
