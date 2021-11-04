@@ -1,0 +1,16 @@
+###
+uses school;
+var a:array [-1111..10000] of int64;
+var k := 0;
+for var i := 1 to 1000 do 
+begin
+  if i < 2 then
+    a[i] := i;
+  if (i >= 2) and (i mod 2 = 0) then
+    a[i] := a[i div 2] + 1;
+  if (i >= 2) and (i mod 2 <> 0) then
+    a[i] := a[3 * i + 1] + 1;
+  if a[i] > 100 then 
+    k += 1;
+end;
+pr(k)
