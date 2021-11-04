@@ -1,0 +1,18 @@
+var max := -9999999;
+
+function f(n:integer):integer ;
+begin
+  if n <= 5 then 
+    f := n;
+  if (n > 5) and (n mod 8 = 0) then 
+    f := n +f(n div 2 - 3);
+  if (n > 5) and (n mod 8 <> 0) then 
+    f := n + f(n + 4);
+  for var i := 1 to 1000 do
+    if n > max then
+      max := n;
+    
+end;
+begin
+  print(f(max))
+end.
