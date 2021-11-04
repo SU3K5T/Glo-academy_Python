@@ -13,10 +13,12 @@ function g(n:int64):int64;begin
   if n >= 10 then
   begin
     g :=g(f(n));
-    if n < 100 then
-      s += g(n);
-  end;
+        end;
 end;
 begin
-  print(s);
+  for var i:=10 to 99 do
+    begiN
+      S+=g(I)
+    end;
+    Print(S);
 end.
