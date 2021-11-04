@@ -1,0 +1,17 @@
+function g(n:int64):int64 ;forward;
+function f(n:int64):int64 ;
+begin
+  if n < 10 then
+    f := n;
+  if n >= 10 then
+    f := f(g(n));
+end;
+function g(n:int64):int64;begin
+  if n < 10 then
+   g := n;
+  if n >= 10 then
+    g := n mod 10 + g(n div 10)
+end;
+begin
+  print(f(12345678987654321))
+end.
