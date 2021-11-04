@@ -1,0 +1,22 @@
+var s := 0;
+function g(n:int64):int64 ;forward;
+function f(n:int64):int64 ;
+begin
+  if n < 10 then
+    f := n;
+  if n >= 10 then
+      f := n mod 10 + f(n div 10)  
+end;
+function g(n:int64):int64;begin
+  if n < 10 then
+   g := n;
+  if n >= 10 then
+  begin
+    g :=g(f(n));
+    if n < 100 then
+      s += g(n);
+  end;
+end;
+begin
+  print(s);
+end.
