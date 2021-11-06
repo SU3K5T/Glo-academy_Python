@@ -1,0 +1,13 @@
+###
+uses school;
+var s := '5'*500;
+var k := 0;
+while ('555' in s) or ('333' in s) do 
+  if ('333' in s) then
+    s := s.Replace('333','5',1)
+  else 
+  begin
+    s := s.Replace('555','3',1);
+    k += 3;
+  end;
+print(k);
