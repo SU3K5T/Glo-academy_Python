@@ -1,0 +1,9 @@
+###
+uses school;
+var s := '2'*103;
+while ('222' in s) do 
+begin
+  s := s.replace('22', '7', 1);
+  s := s.replace('77','2',1);
+end;
+pr(s)
