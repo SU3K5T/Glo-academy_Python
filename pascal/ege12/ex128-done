@@ -1,0 +1,15 @@
+###
+uses school;
+var s := '2'*3;
+var s2 := '5'*18;
+var sSum := s + s2;
+while ('222' in sSum) or ('888' in sSum) do
+  begin
+   while ('555' in sSum) do
+     sSum := sSum.Replace('555', '8', 1);
+  if ('222' in sSum) then
+    sSum := sSum.Replace('222', '8',1)
+  else
+    sSum := sSum.Replace('888', '2',1);
+  end;
+  print(sSum);
