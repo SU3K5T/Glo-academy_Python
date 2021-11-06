@@ -1,0 +1,9 @@
+###
+uses school;
+var s := '5'*150;
+while ('5555' in s) do
+begin
+    s := s.Replace('5555','33',1);
+    s := s.replace('333','5',1);
+ end;
+ pr(s)
