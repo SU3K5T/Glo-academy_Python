@@ -1,0 +1,18 @@
+###
+uses school;
+var s1 := '1';
+var s2 := '8'*80;
+var s3 := s1 + s2;
+while ('18' in s3) or ('288' in s3) or ('3888' in s3) do
+  begin
+  if ('18' in s3) then
+  begin
+    s3 := s3.Replace('18','2',1);
+  else
+    if ('288' in s3) then
+      s3 := s3.Replace('288', '3', 1);
+     else 
+       s3 := s3.Replace('3888', '1', 1);
+  end;
+  end;
+  print(s3);
