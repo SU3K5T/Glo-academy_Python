@@ -1,0 +1,9 @@
+###
+uses school;
+var s := '6'*166;
+while ('2222' in s) or ('666' in s) do
+  if ('2222' in s) then
+    s := s.Replace('2222', '6', 1)
+  else 
+    s := s.Replace('666', '2', 1);
+  pr(s)
