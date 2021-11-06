@@ -1,0 +1,12 @@
+###
+uses school;
+var s1 := '1';
+var s2 := '0' * 75;
+var s3 := s1 + s2;
+
+while ('10' in s3) or ('1' in s3) do
+  if ('10' in s3) then
+    s3 := s3.Replace('10','001',1)
+  else 
+    s3 := s3.Replace('1', '00' , 1);
+pr(s3.CountOf('0'))
