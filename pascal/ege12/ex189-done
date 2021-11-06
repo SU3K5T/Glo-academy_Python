@@ -1,0 +1,9 @@
+###
+uses school;
+var s := '687' * 143;
+while ('68' in s) or ('7777' in s) do
+begin
+  s := s.Replace('68', '7');
+  s := s.Replace('7777', '7');
+end;
+  pr(s)
