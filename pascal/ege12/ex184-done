@@ -1,0 +1,9 @@
+###
+uses school;
+var s := '7'*170;
+while ('777' in s) do 
+begin
+  s := s.Replace('77','2',1);
+  s := s.Replace('22','7',1)
+end;
+pr(s)
