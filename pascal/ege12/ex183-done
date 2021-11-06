@@ -1,0 +1,9 @@
+###
+uses school;
+var s := '1'*198;
+while ('1111' in s) do
+begin
+    s := s.Replace('1111','33',1);
+    s := s.replace('333','1',1);
+ end;
+ pr(s)
