@@ -1,0 +1,11 @@
+###
+uses school;
+var s := '1'*90;
+while ('1111' in s) or ('000' in s) do
+  if ('1111' in s) then
+    s := s.replace('1111','10000',1)
+  else 
+    s := s.Replace('000','11',1);
+  
+  pr(s.CountOf('1'));
+  pr(s.CountOf('0'))
