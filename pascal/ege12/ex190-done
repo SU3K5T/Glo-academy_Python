@@ -1,0 +1,17 @@
+###
+uses school;
+var s := '8' * 100;
+var k := 0;
+var k2 := 0;
+while ('888' in s) or ('77' in s) do 
+  if ('888' in s) then
+    begin
+    s := s.replace('888','8777',1);
+    end
+  else 
+    begin
+    s := s.Replace('77','8',1);
+    end;
+ pr(s.countof('7'));
+ pr(s.countof('8'))
+    
