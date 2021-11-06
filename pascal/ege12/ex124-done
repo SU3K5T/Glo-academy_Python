@@ -1,0 +1,9 @@
+###
+uses school;
+var s := '8'*184;
+while ('222' in s) or ('888' in s) do
+  if ('222' in s) then
+    s := s.Replace('222', '8',1)
+  else
+    s := s.Replace('888', '2',1);
+  print(s);
