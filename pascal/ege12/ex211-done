@@ -1,0 +1,10 @@
+###
+uses school;
+var a := '1'*13 + '2'*13 + '3'*13;
+while ('11' in a) do
+begin
+  a := a.Replace('11','2',1);
+  a:= a.Replace('22','3',1);
+  a:= a.Replace('33','1',1);
+end;
+pr(a)
