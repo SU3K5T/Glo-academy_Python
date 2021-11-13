@@ -1,0 +1,9 @@
+###
+uses school;
+var a := '1'*2018 + '2'*2019;
+while ('111' in a) do
+begin
+  a := a.Replace('111','2',1);
+  a:= a.Replace('222','1',1);
+end;
+pr(a)
