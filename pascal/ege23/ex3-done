@@ -1,0 +1,13 @@
+###
+uses school;
+var a:array [-10..18] of integer;
+a[1] := 1;
+for var i := 1 to 18 do 
+begin
+  a[i] += a[i-1];
+  if i mod 2  = 0 then 
+    a[i] += a[i div 2];
+  if i mod 3 = 0 then 
+    a[i] += a[i div 3]
+end;
+print(a[18])
