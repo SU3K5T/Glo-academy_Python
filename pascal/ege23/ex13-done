@@ -1,0 +1,11 @@
+###
+uses school;
+var a:array [-19..49] of integer;
+a[5] := 1;
+for var i := 5 to 49 do
+begin
+  a[i] += a[i-1];
+  if i mod 3 = 0 then
+     a[i] += a[i div 3];
+end;
+pr(a[49])
