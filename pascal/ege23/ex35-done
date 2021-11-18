@@ -1,0 +1,11 @@
+###
+uses school;
+var a:array [-23..15] of integer;
+a[1] := 1;
+for var i := 1 to 15 do 
+begin
+  a[i] += a[i-1] + a[i div 2];
+  if i mod 10 = 0 then
+    a[i] += a[i div 10]
+end;
+pr(a[15])
