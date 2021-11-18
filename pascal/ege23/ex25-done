@@ -1,0 +1,11 @@
+###
+uses school;
+var a:array [-13..40] of integer;
+a[2] := 1;
+for var i := 2 to 40 do 
+begin
+  a[i] += a[i-2];
+  if i mod 2 = 0 then
+  a[i] += a[i div 2];
+end;
+pr(a[40])
