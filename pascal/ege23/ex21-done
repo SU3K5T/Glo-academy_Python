@@ -1,0 +1,14 @@
+###
+uses school;
+var a:array [-13..51] of integer;
+a[25] := 1;
+for var i := 26 to 51 do 
+begin
+  a[i] += a[i-1];
+  if i mod 10 = 9 then 
+    a[i] += a[i - 10] + a[i -11]
+  else 
+    if i mod 10 <> 0 then
+      a[i] += a[i - 11]
+end;
+pr(a[51])
