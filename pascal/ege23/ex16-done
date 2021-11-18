@@ -1,0 +1,13 @@
+###
+uses school;
+var a:array [-9..38] of integer;
+a[2] := 1;
+for var i := 3 to 38 do 
+begin
+  a[i] += a[i - 1];
+  if i mod 2 = 0 then 
+    a[i] += a[i div 2] ;
+  if (frac(sqrt(i)) = 0) then
+    a[i] += a[trunc(sqrt(i))]
+end;
+print(a[38])
