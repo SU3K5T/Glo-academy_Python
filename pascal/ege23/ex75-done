@@ -1,0 +1,9 @@
+###
+uses school;
+var a:array [-80..30] of integer;
+a[21] := 1;
+for var i := 21 to 30 do 
+begin
+  a[i] += a[i-1] + a[i-2] + a[i-5];
+end;
+pr(a[30])
