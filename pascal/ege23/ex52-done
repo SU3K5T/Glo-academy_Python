@@ -1,11 +1,10 @@
 ###
 uses school;
 var a:array [-20..14] of integer;
-
 a[4] := 1;
 for var i := 4 to 14 do 
 begin
   a[i] += a[i-2];
   a[i]+=a[i-1];
   end;
-pr(a[14])
+pr(a[12] + a[11])
