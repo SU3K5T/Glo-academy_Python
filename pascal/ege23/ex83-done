@@ -1,0 +1,10 @@
+###
+uses school;
+var a:array [-12..15] of integer;
+a[3] := 1;
+for var i := 3 to 15 do
+  if i <> 8 then
+  begin
+    a[i] += a[i-1] + a[i-2] + a[i-3]; 
+  end;
+  pr(a[15])
