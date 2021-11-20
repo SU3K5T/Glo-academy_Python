@@ -1,0 +1,15 @@
+###
+uses school;
+var a:array [-12..60] of integer;
+a[5] := 1;
+for var i := 5 to 60 do 
+  if i <> 22 then
+  begin
+    a[i] += a[i-1];
+    if i mod 2 = 0 then
+      a[i] += a[i div 2];
+    if i = 8 then
+      for var j := 1 to 7 do 
+        a[j] := 0;
+  end;
+  pr(a[60])
