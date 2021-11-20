@@ -1,0 +1,14 @@
+###
+uses school;
+var a:array [-20..21] of integer;
+a[1] := 1;
+for var i := 1 to 21 do 
+begin
+  a[i]+=a[i-1];
+  if i mod 2 = 0 then
+    a[i] += a[i div 2];
+  if i = 10 then
+    for var j := 1 to 9 do 
+      a[j] := 0
+  end;
+pr(a[21])
