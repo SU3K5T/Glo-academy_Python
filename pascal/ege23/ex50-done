@@ -11,4 +11,4 @@ begin
   a[i]+=a[i-1];
   end;
   
-pr(a[20])
+pr(a[18] + a[9])
