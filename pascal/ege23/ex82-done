@@ -1,0 +1,12 @@
+###
+uses school;
+var a:array [-23..31] of integer;
+a[1] := 1;
+for var i := 1 to 31 do 
+  if i <> 25 then
+  begin
+    a[i] += a[i-1];
+    if i mod 2 <> 0 then
+      a[i] += a[i div 2]
+  end;
+  pr(a[31])
