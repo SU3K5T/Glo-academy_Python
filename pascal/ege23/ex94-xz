@@ -1,0 +1,11 @@
+###
+uses school;
+var a:array [-20..22] of integer;
+a[22] := 1;
+for var i := 22 downto 3 do 
+begin
+  a[i-1] += a[i];
+  a[i-3] += a[i];
+  a[i mod 4] += a[i];
+end;
+pr(a[2]);
