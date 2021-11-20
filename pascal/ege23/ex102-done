@@ -1,0 +1,16 @@
+###
+uses school;
+var a:array [-23..24] of integer;
+a[2] := 1;
+for var i := 2 to 24 do 
+  if i <> 8 then
+  begin
+    a[i] += a[i-1];
+    a[i]+= a[i-4];
+    if i mod 4 = 0 then
+      a[i] += a[i div 4];
+    if i = 6 then
+      for var j := 1 to 5 do 
+        a[j] := 0;
+  end;
+  pr(a[24])
