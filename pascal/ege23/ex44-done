@@ -1,0 +1,14 @@
+###
+uses school;
+var a:array [-20..15] of integer;
+a[4] := 1;
+for var i := 4 to 15 do 
+begin
+  a[i] += a[i-1] + a[i-2] + a[i-3];
+  if i = 8 then
+  begin
+    for var j := 1 to 7 do 
+     a[j] := 0;
+  end;
+end;
+pr(a[15])
