@@ -1,0 +1,11 @@
+###
+uses school;
+var a:array [-20..200] of integer;
+
+a[2] := 1;
+for var i := 2 to 11 do 
+begin
+  a[i]+=a[i-2]+a[i-3];
+ a[i+(i-1)] += a[i];
+  end;
+pr(a[11])
