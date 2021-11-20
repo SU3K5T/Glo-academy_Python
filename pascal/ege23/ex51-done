@@ -1,14 +1,11 @@
 ###
 uses school;
-var a:array [-20..20] of integer;
-
-a[3] := 1;
-for var i := 4 to 20 do 
+var a:array [-20..32] of integer;
+a[5] := 1;
+for var i := 5 to 32 do 
 begin
-  
   if i mod 2 = 0 then 
     a[i] += a[i div 2];
   a[i]+=a[i-1];
   end;
-  
-pr(a[20])
+pr(a[30] + a[15])
