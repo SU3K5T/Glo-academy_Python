@@ -1,0 +1,15 @@
+###
+uses school;
+var a:array [-20..30] of integer;
+a[3] := 1;
+for var i := 4 to 30 do 
+  if i <> 12 then
+  begin
+    a[i]+=a[i-1];
+  if i mod 2 = 0 then
+    a[i] += a[i div 2];
+  if i = 20 then
+    for var j := 1 to 19 do 
+      a[j] := 0
+  end;
+pr(a[30])
