@@ -1,0 +1,14 @@
+###
+uses school;
+var a:array [-20..15] of integer;
+a[5] := 1;
+for var i := 6 to 15 do 
+begin
+  a[i] += a[i-1] + a[i-2];
+  if i = 10 then
+  begin
+    for var j := 1 to 9 do 
+     a[j] := 0;
+  end;
+end;
+pr(a[15])
