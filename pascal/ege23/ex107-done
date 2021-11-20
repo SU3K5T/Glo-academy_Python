@@ -1,0 +1,17 @@
+var kol:integer;
+procedure F(x,k:integer);
+begin
+  if k < 7 then
+  begin
+    F(x+1,k+1);
+    F(x+4,k+1);
+    F(x*2,k+1);
+  end
+  else 
+    if x = 27 then
+      kol += 1;
+end;
+begin
+  F(3,0);
+  print(kol)
+end.
