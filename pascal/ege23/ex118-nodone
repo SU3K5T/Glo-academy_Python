@@ -1,0 +1,12 @@
+###
+uses school;
+var a:array [-23..59] of integer;
+for var j := 1 to 34 do 
+  a[j] := 1;
+for var i := 35 to 59 do 
+begin
+  a[i] += a[i-1] + a[i-2];
+  if i mod 2 = 0 then
+    a[i] += a[i div 2];
+end;
+pr(a[59])
