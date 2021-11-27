@@ -1,0 +1,21 @@
+var kol:integer;
+var m: set of integer;
+procedure F(x,k:integer);
+begin
+  if k < 6 then
+  begin
+  F(x+1,k+1);
+  F(x+2,k+1);
+  F(x*2,k+1);
+  end
+  else 
+  if not(x in m) and (x >= 34) and (x <= 59) then
+  begin
+     kol += 1;
+    include(m,x);
+  end;  
+end;
+begin
+F(1,0);
+print(kol)
+end.
