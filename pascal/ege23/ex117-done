@@ -1,0 +1,22 @@
+var kol:integer;
+var m: set of integer;
+procedure F(x,k:integer) ;
+begin
+  if ( k<7) then
+    begin
+      f(x+1,k+1);
+       f(x+5,k+1);
+       f(x*3,k+1);
+    end
+    else
+      if not(x in m) then
+        begin
+        kol+=1;
+        Include(m,x);
+        end;
+end;
+
+begin
+f(1,0);
+Print(kol);  
+end.
