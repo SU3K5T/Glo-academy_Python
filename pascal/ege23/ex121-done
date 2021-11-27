@@ -1,0 +1,12 @@
+###
+uses school;
+var a:array [-234..200] of integer;
+a[5] := 1;
+for var i := 5 to 200 do 
+begin
+  a[i] += a[i-2];
+  a[i] += a[i-5];
+  end;
+for var j := 5 to 200 do 
+  if a[j] = 34 then
+    print(j)
