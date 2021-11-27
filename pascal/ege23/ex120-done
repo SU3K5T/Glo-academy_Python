@@ -1,0 +1,13 @@
+###
+uses school;
+var a:array [-234..100] of integer;
+a[1] := 1;
+for var i := 2 to 100 do 
+begin
+  a[i] += a[i-1] +a[i-5];
+  if i mod 3 = 0 then
+    a[i] += a[i div 3];
+end;
+for var j := 2 to 100 do 
+  if a[j] = 175 then  
+print(j)
