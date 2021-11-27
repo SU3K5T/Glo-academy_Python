@@ -1,0 +1,14 @@
+###
+uses school;
+var a:array [-234..2999] of integer;
+a[31] := 1;
+for var i := 31 to 2999 do 
+begin
+  a[i] += a[i-2];
+  a[i] += a[i-4];
+  a[i] += a[i-5];
+  
+end;
+for var j := 31 to 2000 do 
+  if a[j] = 1001 then
+    print(j)
