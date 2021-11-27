@@ -1,0 +1,15 @@
+###
+uses school;
+var a:array [-234..41] of integer;
+a[1] := 1;
+for var i := 2 to 41 do 
+if i <> 32 then
+begin
+  a[i] += a[i-3];
+  if i mod 2 = 0 then
+    a[i] += a[i div 2];
+  if i = 16 then
+    for var j := 1 to 15 do 
+      a[j] := 0;
+end;
+print(a[41])
