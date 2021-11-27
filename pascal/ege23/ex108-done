@@ -1,0 +1,17 @@
+###
+uses school;
+var a:array [-234..28] of integer;
+a[1] := 1;
+for var i := 2 to 28 do 
+  if (i <> 10) and (i <> 11) then
+  begin
+    a[i] += a[i-1] + a[i-2];
+    if i mod 3 = 0 then
+      a[i] += a[i div 3];
+    if i = 8 then
+    begin
+       for var j := 1 to 7 do 
+        a[j] := 0;
+    end;
+  end;
+  pr(a[28])
