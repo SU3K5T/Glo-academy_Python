@@ -1,0 +1,14 @@
+###
+uses school;
+var a:array [-434..205] of integer;
+a[25] := 1;
+for var i := 24 downto 3 do 
+begin
+  a[i] += a[i+2];
+  a[i] += a[i+3];
+   a[Dec(bin(i) + '1', 2) - 1] +=a[i];
+if i=12 then
+  for var j:= 25 downto 13 do    
+  a[j]:=0;
+end;
+print(a[3])
