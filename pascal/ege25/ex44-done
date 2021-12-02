@@ -1,0 +1,30 @@
+uses school;
+var k := 0;
+function isMyPrime(x:integer):integer;
+begin
+var flag := 1;
+if x > 2 then 
+begin
+  for var i := 2 to x - 1 do 
+    if x mod i = 0 then
+    begin
+      flag := 0;
+      break
+    end;
+end
+else 
+  if x <= 1 then 
+    flag := 0;
+if flag = 1 then 
+  isMyPrime := 1
+else 
+  isMyPrime := 0;
+end;
+begin
+for var i := 4837177 to 4837236 do 
+  if isMyPrime(i) = 1 then
+    begin
+    k += 1;
+    println(k,i)
+    end;
+end.
