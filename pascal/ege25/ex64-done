@@ -1,0 +1,9 @@
+###
+uses school;
+var k := 0;
+for var i := 2532000 to 2532160 do 
+  if i.isPrime and (i mod 10 = 7) then
+  begin
+    k += 1;
+    println(k,i)
+  end;
