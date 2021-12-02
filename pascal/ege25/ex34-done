@@ -1,0 +1,17 @@
+###
+uses school;
+var max := 0;
+for var i := 586132 to 586430 do 
+begin
+  var k := 2;
+  var s := 0;
+  for var j := 2 to i div 2 do 
+    if i mod j = 0 then
+    begin
+      k += 1;
+      s := j;
+    end;
+    if k = 80 then
+      println(80,i,s)
+end;
+//80
