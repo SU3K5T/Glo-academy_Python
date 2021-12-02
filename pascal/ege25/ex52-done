@@ -1,0 +1,9 @@
+###
+uses school;
+var k := 0;
+for var i := 4409962 to 4410101 do 
+  if i.isPrime then 
+  begin
+    k += 1;
+    println(k,i)
+  end;
