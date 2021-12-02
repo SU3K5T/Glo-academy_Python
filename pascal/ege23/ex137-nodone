@@ -1,0 +1,10 @@
+###
+uses school;
+var a:array [-234..20000] of integer;
+a [Dec('1100',2)] := 1;
+for var i := Dec('1100',2) downto Dec('100',2) do
+begin
+  a[i] += a[i+1];
+  a[i] += a[i*0]
+end;
+print(a[4])
