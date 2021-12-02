@@ -1,0 +1,44 @@
+Этап 1: Находение минимума
+###
+uses school;
+var min := 78787878;
+for var i := 573213 to 575340 do 
+  begin
+  var s := '';
+  var k := 2;
+  var sum := 1+i;
+  for var j := 2 to i div 2 do 
+    if i mod j = 0 then
+    begin
+      sum += j;    
+      k += 1;
+    end;
+    if (sum < min) and (k=4) then
+    begin
+        min := sum
+      end;
+  end;
+  print(min)
+   
+   Этап 2: Деградация
+   
+   ###
+uses school;
+for var i := 573213 to 575340 do 
+  begin
+  var s := 0;
+  var k := 2;
+  var sum := 1+i;
+  for var j := 2 to i div 2 do 
+    if i mod j = 0 then
+    begin
+      sum += j;    
+      k += 1;
+      s := j;
+    end;
+    if (sum = 574992) and (k=4) then
+    begin
+        print(sum,s)
+      end;
+  end;
+  
