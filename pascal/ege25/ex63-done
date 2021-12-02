@@ -1,0 +1,10 @@
+uses school;
+var k := 0;
+var kol := 0;
+for var i := 2532000 to 2532160 do 
+  if i.isPrime and (kol < 5) then
+  begin
+    k += 1;
+    kol += 1;
+    println(k,i)
+  end;
