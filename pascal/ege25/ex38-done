@@ -1,0 +1,49 @@
+// Этап 1: Находим максимальную сумму делителей 
+###
+uses school;
+var max := 0;
+
+for var i := 268220 to 270335 do 
+  begin
+  var s := 0;
+  var k := 2;
+  var sum := i+1;
+  for var j := 2 to i div 2 do 
+    if i mod j = 0 then
+      begin
+    k += 1;
+    sum += j;
+    
+    end;
+    if (sum > max) and (k <= 4) then
+      begin
+      max := sum;
+//      print(sum, k, s);    
+      
+  end;
+  print(max)
+  
+  //Этап 2: Кончаем
+  
+  ###
+uses school;
+var max := 0;
+
+for var i := 268220 to 270335 do 
+  begin
+  var s := '';
+  var k := 2;
+  var sum := i+1;
+  for var j := i div 2 downto 2 do 
+    if i mod j = 0 then
+    begin
+      k += 1;
+      sum += j;
+      s += j + ' '
+    end;
+    if (sum = 405456) and (k <= 4) then
+    begin
+      
+      print(sum, k, i, s, 1);    
+      end;
+  end;
