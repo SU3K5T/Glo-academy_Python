@@ -1,0 +1,10 @@
+###
+uses school;
+var k := 0;
+var kol := 0;
+for var i := 194441 to 196500 do 
+  if i.isPrime and (i mod 100 = 93) then 
+  begin
+    k += 1;
+    println(k,i)
+  end;
