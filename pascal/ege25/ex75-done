@@ -1,0 +1,12 @@
+###
+uses school;
+var k := 0;
+for var i := 1000 to 20000 do 
+begin
+  var sum := 1;
+  for var j := 2 to i div 2 do 
+    if (i mod j = 0) then
+     sum += j;
+    if (i - sum  =  1) then
+      println(i)
+end;
