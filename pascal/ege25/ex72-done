@@ -1,0 +1,32 @@
+//Этап 1: Находим максимум
+
+###
+uses school;
+var max := 0;
+for var i := 2 to 20000 do 
+begin
+  var k := 0;
+  for var j := 2 to i div 2 do 
+    if (i mod j = 0) and (j.isPrime) then
+      k += 1;
+    if k > max then
+      max := k;
+end;
+ print(max)
+ 
+//Этап 2: Деградация
+
+###
+uses school;
+var min := 898989;
+for var i := 2 to 20000 do 
+begin
+  var k := 0;
+  for var j := 2 to i div 2 do 
+    if (i mod j = 0) and (j.isPrime) then
+      k += 1;
+   if k = 5 then
+     if i < min then
+       min := i;
+end;
+print(min, 5)
