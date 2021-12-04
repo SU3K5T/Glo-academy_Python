@@ -1,0 +1,18 @@
+###
+uses school;
+var h := 0;
+for var i := 333555 to 777999 do
+  begin
+  var k := 0;
+  var min := 3939393;
+  for var j := 10 to 99 do
+    if (i mod j = 0)  then
+      begin
+      k += 1;
+      h := j;
+      if j < min then
+        min := j;
+      end;
+    if k = 35 then
+      println(i,min,h)
+    end;
