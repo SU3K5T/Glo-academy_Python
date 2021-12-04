@@ -1,0 +1,18 @@
+###
+uses school;
+var s := 0;
+for var i := 1686 to 13276 do
+begin
+  var flag := 1;
+  var z := i;
+  while z <> 0 do
+    begin
+    var t := z mod 10;
+    if t mod 2 = 0 then
+      flag := 0;
+    z := z div 10;
+    end;
+      if flag = 1 then
+        s += digits(i).Sum
+end;
+print(s)
