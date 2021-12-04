@@ -1,0 +1,26 @@
+uses school;
+function isValid(x:integer):integer;
+begin
+  var a := digits(x);
+  var flag := 1;
+  if (a[2] mod 2 = 0) or (a[3] mod 2 = 0) or  (a[4] mod 2 = 0) then
+    flag := 0;
+  if (a[0] mod 2 <> 0) or (a[1] mod 2 <> 0) then
+    flag := 0;
+  isValid := flag;
+end;
+begin
+  var k := 0;
+  var max := 0;
+  var min := 8998989;
+  for var i := 64444 to 77563 do 
+  if (isValid(i) = 1) and (i mod 9 <> 0) and (i mod 13 <> 0) and (i mod 17 <> 0) then
+    begin
+    k += 1;
+    if i < min then 
+      min := i;
+    if i > max then
+      max := i;
+end;
+print(k, max - min)
+end.
