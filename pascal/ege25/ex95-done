@@ -1,0 +1,15 @@
+###
+uses school;
+var s := 0;
+for var i:=1395 to 22717 do
+begin
+  var z := digits(i);
+  var flag := 0;
+  for var j := 0 to z.Cnt-2 do
+    if (z[j] > z[j+1]) then
+      flag := 1;
+ 
+   if flag = 0 then
+     s += i
+end;
+print(s)
