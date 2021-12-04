@@ -1,0 +1,5 @@
+###
+uses school;
+for var i := 135790 to 163228 do 
+    if Divisors(i).sum-1-i > 460000 then
+      println(Divisors(i).cnt-2,Divisors(i).sum-1-i)
