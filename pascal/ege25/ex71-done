@@ -5,12 +5,12 @@ var kol := 0;
 for var i:= 11 to 20000 do 
 begin
   k := 0;
-  for var j := 1 to i div 2 do
-    if (i mod j = 0) and j.isPrime then
+  for var j := 2 to i div 2 do
+    if (i mod j = 0) and (j.isPrime) then
     begin
       k += 1;
     end;
-    if k >= 3 then 
+    if k > 3 then 
       kol += 1;
 end;
 print(kol)
