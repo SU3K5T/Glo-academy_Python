@@ -1,0 +1,13 @@
+###
+uses school;
+var s := 0;
+for var i := 4099 to 26985 do
+begin
+  var k := 0;
+  for var j := 2 to i div 2 do 
+    if i mod j = 0 then
+      k += 1;
+    if k = 1 then
+      s += digits(i).Sum
+end;
+pr(s)
