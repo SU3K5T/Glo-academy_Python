@@ -1,0 +1,7 @@
+###
+uses school;
+var s:= 0;
+for var i := 3159 to 31584 do
+if i.IsPrime then
+  s += digits(i).Sum;
+pr(s)
