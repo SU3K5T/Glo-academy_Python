@@ -1,0 +1,28 @@
+###
+uses school;
+for var i := 326496 to 649632 do
+begin
+  var min := 8889889;
+  var k := 0;
+  var kol := 0;
+  for var j := 1 to   trunc(sqrt(i ))  do
+    if i mod j = 0 then
+    begin
+      if j mod 2 = 0 then
+        k += 1;
+      if j mod 2 <> 0 then
+        kol += 1;
+      if i div j mod 2 = 0 then
+        k += 1;
+      if i div j mod 2 <> 0 then
+        kol += 1;
+      if (j < min) and (j > 1000) then
+        min := j;
+      if (i div j < min) and (i div j > 1000) then
+        min := i div j;
+    end;
+    if (kol >= 70) and (k >= 70) and (k = kol) then
+      println(i, min);
+end;
+  
+  
