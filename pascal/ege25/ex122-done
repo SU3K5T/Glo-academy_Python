@@ -1,0 +1,37 @@
+uses school;
+var j := 0;
+function isValid(x:integer; t:integer):boolean;
+begin
+  var kk := 0;
+  for var g := 2 to trunc(sqrt(x)) do
+    if (x mod g = 0) and (x div g).isPrime and (g.IsPrime) and (x div g mod 10 = g mod 10) 
+    and (g mod 10 = t mod 10) and (x div g mod 10 = t mod 10) and (x div g <> g) and (g <> t) and (x div g <> t) then
+     begin
+     kk += 1;
+ break
+ end;
+ if kk > 0 then
+      isValid := True
+    else 
+      isValid := False
+end;
+begin
+  var kol := 0;
+  var sum :biginteger;
+  for var i := 356712 to 420901 do
+  begin
+    var k := 0;
+    for j := 2 to trunc(sqrt(i)) do
+      if (i mod j = 0) and (j.isPrime) and (isValid(i div j, j)) then
+      begin
+        k += 1;
+        break
+      end;
+      if k > 0 then 
+      begin
+        kol += 1;
+        sum += i;
+      end;
+  end;
+ print(kol, sum div kol);
+end.
