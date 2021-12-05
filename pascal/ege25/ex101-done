@@ -1,0 +1,21 @@
+###
+uses school;
+var kol := 0;
+var max := 0;
+for var i := 125697 to 190234 do
+begin
+  var k := 0;
+  for var j := 2 to trunc(sqrt(i-)) do 
+    if (i mod j = 0) and (j.IsPrime) and ((i div j).IsPrime) and (j <> i div j) then
+    begin
+      k += 1;
+      break
+    end;
+      if k > 0 then
+       begin
+       kol += 1;
+       if i > max then
+         max := i;
+       end;
+end;
+print(kol,max)

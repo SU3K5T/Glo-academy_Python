@@ -1,7 +1,0 @@
-###
-uses school;
-for var i := 125697 to 190234 do
-begin
-  for var j := 2 to i div 2 do 
-    если j = i div j тогда увеличивем счетчик
-end;
