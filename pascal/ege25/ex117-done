@@ -1,0 +1,36 @@
+uses school;
+var j := 0;
+function isValid(x:integer; t:integer):boolean ;
+begin
+    var k := 0;
+    for var g := 2 to trunc(sqrt(x)) do
+      if (x mod g = 0) and (g.isPrime) and (x div g).IsPrime and (g <> x div g) and (g <> t) and (x div g <> t) then
+      begin
+        k += 1;
+      end;
+      if k > 0 then
+        isValid := True
+      else 
+        isValid := False;
+  end;
+begin
+ var kol := 0;
+ var max := 0;
+for var i := 105673 to 220784 do
+begin
+  var kk := 0;
+  for j := 2 to trunc(sqrt(i)) do
+    if (i mod j = 0) and (isValid(i div j, j)) and (j.IsPrime)  then
+      begin
+      kk += 1;
+      break
+      end;
+      if kk > 0 then
+        begin
+        kol += 1;
+      if i > max then
+        max := i;
+      end;
+end;
+print(kol, max)
+end.
