@@ -1,0 +1,24 @@
+###
+uses school;
+var kol := 0;
+var min := 9989898;
+var sum := 0bi;
+for var i := 298435 to 363249 do
+begin
+   var k := 0;
+   for var j := 2 to trunc(sqrt(i)) do
+     if (i mod j = 0) and (j.isPrime) and (i div j).IsPrime and (j <> i div j) then
+     begin
+      k += 1;
+      break
+     end;
+     if k > 0 then
+     begin
+       kol += 1;
+       sum += i;
+//       if (i > 330000) and (i < 331000) then
+//       println(i)
+     end;
+end;
+print(kol, 330929)
+//330929
