@@ -1,0 +1,28 @@
+###
+uses school;
+var z := 0;
+var z2 := 0;
+var kol := 0;
+var h := 0;
+var min := 98989898;
+for var i := 478392 to 502439 do
+begin
+  var k := 0;
+  for var j := 2 to trunc(sqrt(i)) do
+    if (i mod j = 0) and (j.isPrime) and ((i div j).IsPrime) and (j <> i div j) then
+    begin
+      k += 1;
+      z := j;
+      z2 := i div j;
+    end;
+    if k > 0 then
+      begin
+     kol += 1;
+     if (z2 - z < min) then
+     begin
+       min := z2 - z;
+       h := i;
+     end;
+     end;
+end;
+print(kol, h);
