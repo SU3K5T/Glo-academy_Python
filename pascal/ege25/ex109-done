@@ -1,0 +1,21 @@
+###
+uses school;
+var kol := 0;
+var min := 9989898;
+for var i := 173225 to 217437 do
+begin
+   var k := 0;
+   for var j := 2 to trunc(sqrt(i)) do
+     if (i mod j = 0) and (j.isPrime) and (i div j).IsPrime and (j <> i div j) and (j mod 10 = i div j mod 10) then
+     begin
+      k += 1;
+      break
+     end;
+     if k > 0 then
+     begin
+       kol += 1;
+     if i < min then
+       min := i;
+     end;
+end;
+print(kol, min)
