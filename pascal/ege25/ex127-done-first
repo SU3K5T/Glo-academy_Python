@@ -1,0 +1,18 @@
+###
+uses school;
+for var i:=1523467 to 4157812 do
+begin
+  var k := 0;
+  var max := 0;
+  if (trunc(sqrt(i))=(sqrt(i))) then
+  for var j := 2 to i div 2 do
+    if i mod j = 0 then
+    begin
+      k += 1;
+      if j > max then
+        max := j;
+    end;
+    if k = 3 then
+      println(i,max)
+end;
+  
