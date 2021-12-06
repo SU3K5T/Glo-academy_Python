@@ -1,0 +1,30 @@
+###
+uses school;
+var kol := 0;
+var sum := 0bi;
+var p := 0;
+var p2 :=0 ;
+var z := 0;
+var z2 := 0;
+var min := 89899898;
+for var i := 523456 to 578925 do
+begin
+   var k := 0;
+   for var j := 2 to trunc(sqrt(i)) do
+     if (i mod j = 0) and (j.isPrime) and (i div j).IsPrime and (j <> i div j) then
+     begin
+      k += 1;
+      z:=j;
+     z2:=i div j;
+     end;
+     if k > 0 then
+       begin
+         if (z2-z<min) then
+           begin
+             min:=z2-z;
+             p:=z;
+             p2:=z2;
+           end;
+       end;
+end;
+print(p2,p)
