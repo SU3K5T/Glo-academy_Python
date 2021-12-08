@@ -1,0 +1,5 @@
+###
+uses school;
+for var i:=12034679 to 23175821 do
+  if (divisors(i).Cnt=5) then
+    Println(i,divisors(i)[3]);
