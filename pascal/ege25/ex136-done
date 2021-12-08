@@ -1,0 +1,26 @@
+###
+uses school;
+for var i := 25317 to 51237 do
+begin
+  var k := 0; var max := 0;
+  for var j := 2 to trunc(sqrt(i)) do
+    if (i mod j = 0) then
+    begin
+      if (j.isPrime) then
+     begin
+        if  j > max then 
+          max :=  j;
+        k += 1;
+        end;
+      if (i div j).isPrime and (i div j <> j) then
+      begin
+        if i div j > max then 
+          max := i div j;
+        k += 1;
+        end;
+      if k > 5 then
+        break
+    end;
+    if k > 5 then
+      println(i, max)
+end;
