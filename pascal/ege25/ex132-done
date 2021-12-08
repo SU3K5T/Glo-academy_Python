@@ -1,0 +1,17 @@
+###
+uses school;
+for var i := 247264322 to 369757523 do
+begin
+  var k := 0;
+  if (frac(sqrt(i))=0) then
+    for var j := 2 to trunc(sqrt(i)) do
+      if i mod j = 0 then
+      begin
+        k += 1;
+        if k > 2 then
+          break
+      end;
+      if k = 2 then
+        println(i, i.divisors[3])
+end;
+Print(Milliseconds);
