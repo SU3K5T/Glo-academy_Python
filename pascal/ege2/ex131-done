@@ -1,0 +1,6 @@
+//2.131
+###
+uses school;
+var a:= TrueTable((a,b,c) -> ((a <= b) and ((a and b) <= not(c))));
+TrueTablePrint(a,0,'abc')
+//cab
