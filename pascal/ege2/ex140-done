@@ -1,0 +1,6 @@
+//2.140
+###
+uses school;
+var a:= TrueTable((x,y,z,w) -> ((not(x) and y and z or x and not(z)) and not(w)));
+TrueTablePrint(a,1,'xyzw')
+//wxzy
