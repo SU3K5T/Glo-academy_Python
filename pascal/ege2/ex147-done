@@ -1,0 +1,6 @@
+//2.147
+###
+uses school;
+var a := TrueTable((x,y,z) -> ((x <= y) and (y <= z)));
+TrueTablePrint(a,1,'xyz')
+//zxy
