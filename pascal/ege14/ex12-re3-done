@@ -1,0 +1,5 @@
+###
+uses school;
+for var i:=2 to 36 do
+  if (ToBase(69,i).Cnt=4) and (ToBase(69,i)[4]='1') then
+Println(i);  
