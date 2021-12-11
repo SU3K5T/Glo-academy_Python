@@ -1,0 +1,4 @@
+###
+uses school;
+var a := power(9bi,7) + power(3bi,21) - 9;
+pr(tobase(a,3).cnt('2'))
