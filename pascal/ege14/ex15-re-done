@@ -1,0 +1,4 @@
+###
+uses school;
+var a := power(4bi,12) + power(2bi,32) - 16;
+pr(bin(a).cnt('1'))
