@@ -1,0 +1,4 @@
+###
+uses school;
+var a := power(49bi,6) + power(7bi,18) - 21;
+pr(tobase(a,7).Cnt('6'))
