@@ -1,0 +1,6 @@
+###
+uses school;
+var a := 33;
+pr(a.Divisors);
+var b := 55;
+pr(b.divisors)  
