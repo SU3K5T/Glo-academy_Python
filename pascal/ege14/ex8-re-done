@@ -1,0 +1,4 @@
+###
+uses school;
+var a:= power(4bi,511) + power(2bi,511) - 511;
+pr(bin(a).Cnt('1'))
