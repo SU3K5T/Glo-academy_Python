@@ -1,0 +1,4 @@
+###
+uses school;
+var a := power(36bi,7) + power(6bi,19) - 18;
+pr(tobase(a,6).cnt('0'))
