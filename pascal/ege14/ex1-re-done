@@ -1,0 +1,3 @@
+###
+uses school;
+bin(power(4bi,2020) + Power(2bi,2017)-15).Cnt('1').pr
