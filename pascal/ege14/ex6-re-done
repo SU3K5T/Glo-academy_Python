@@ -1,0 +1,4 @@
+###
+uses school;
+var a := 125 + power(25bi, 3) + power(5bi,9);
+print(tobase(a,5).Cnt('0'));
