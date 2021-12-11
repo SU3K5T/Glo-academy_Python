@@ -1,0 +1,4 @@
+###
+uses school;
+var a:= 2*power(216bi,6) + 3 * power(36bi,9) - 432;
+pr(tobase(a,6).cnt('5'))
