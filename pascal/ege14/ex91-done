@@ -1,0 +1,4 @@
+###
+uses school;
+var a := power(4bi, 2014) + power(2bi,2015) - 9;
+print(bin(a).Cnt('1'))
