@@ -1,0 +1,4 @@
+###
+uses school;
+var a := power(8bi, 125) - power(4bi,156) + power(2bi,632) - 7;
+print(bin(a).cnt('1'))
