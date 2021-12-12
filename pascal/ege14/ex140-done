@@ -1,0 +1,3 @@
+###
+uses school;
+(tobase((power(2bi,299) + power(2bi,298) + power(2bi,297) + power(2bi,296)),8).cnt).pr
