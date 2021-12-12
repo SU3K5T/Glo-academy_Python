@@ -1,0 +1,7 @@
+###
+uses school;
+var k := 0;
+for var i := 1 to 10000 do 
+  if (tobase(i,16).Cnt = 2) and (tobase(i,8).Cnt = 3) and (tobase(i,16)[2] = 'A') then
+    k += 1;
+    print(k)
