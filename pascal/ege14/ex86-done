@@ -1,0 +1,9 @@
+###
+uses school;
+for var i:=2 to 36 do
+  if (ToBase(41,i)[ToBase(41,i).cnt]='2') then
+Print(i);
+print('----------------');
+for var i:=2 to 36 do
+  if (ToBase(131,i)[ToBase(131,i).cnt]='1') then
+Print(i);
