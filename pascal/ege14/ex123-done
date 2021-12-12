@@ -1,0 +1,4 @@
+###
+uses school;
+var a := power(8bi, 2020) + power(4bi, 2017) + 64 - 1;
+print(bin(a).cnt('1'))
