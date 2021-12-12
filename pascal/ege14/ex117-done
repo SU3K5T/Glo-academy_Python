@@ -1,0 +1,4 @@
+###
+uses school;
+var a := power(4bi,2015) + power(8bi, 2016) - power(2bi, 2017) - 150;
+print(bin(a).cnt('0'))
