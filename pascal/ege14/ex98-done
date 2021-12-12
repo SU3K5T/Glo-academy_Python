@@ -1,0 +1,4 @@
+###
+uses school;
+var a := power(8bi, 4024) - power(4bi,1605) + power(2bi,1024) - 126;
+print(bin(a).Cnt('1'))
