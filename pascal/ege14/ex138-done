@@ -1,0 +1,4 @@
+###
+uses school;
+var a := power(2bi, 1024) + power(2bi,1026);
+print(oct(a).Cnt)
