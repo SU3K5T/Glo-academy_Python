@@ -1,0 +1,21 @@
+###
+uses school;
+for var a := 1 to 1000 do
+begin
+  var f := true;
+  var f1 := true;
+  for var x := 1 to 1000 do
+    if ( (x <= 13) <= (x*x < a) ) = false then
+    begin
+      f := false;
+      break
+    end;
+    for var y := 1 to 1000 do
+    if ( (y*y < a) <= (y <= 14) )  = false then
+    begin
+      f1 := false;
+      break
+    end;
+    if f and f1 then
+      pr(a)
+end;
