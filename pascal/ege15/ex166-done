@@ -1,0 +1,15 @@
+//166
+###
+uses school;
+for var a := 1 to 1000 do
+begin
+  var flag := 0;
+  for var x := 1 to 1000 do
+    if (( (X and 13 <>  0) or (X and A = 0)) <= (X and 13 <> 0))   or  (X and A <> 0) or (X and 39 = 0) = false then
+    begin
+      flag := 1;
+      break
+    end;
+    if flag = 0 then
+      pr(a)
+end;
