@@ -1,0 +1,15 @@
+//174
+###
+uses school;
+for var a := 1 to 1000 do
+begin
+  var flag := 1;
+  for var x := 1 to 10000 do
+    if ( (x and 28 =  0) or  (x and 22 = 0)) <= ((x and 56 <> 0) <= (x and a = 0)) = false then
+    begin
+      flag := 0;
+      break
+    end;
+    if flag = 1 then
+      print(a)
+end;
