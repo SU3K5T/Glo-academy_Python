@@ -1,0 +1,17 @@
+###
+uses school;
+var k:=0;
+for var a := 1 to 1000 do
+  begin
+  var f := true;
+  for var x := 1 to 1000 do
+    for var y := 1 to 1000 do
+         if ( (x > 8) <= (x*x+3*x >= A) ) and ( (y*y + 5*y > A) <= (y >= 4) ) = false then
+         begin
+           f := false;
+          break
+         end;
+       if f then
+         k += 1;
+       end;
+       pr(k)
