@@ -1,0 +1,4 @@
+###
+uses school;
+var a := power(27bi, 4) - power(9bi,5) + power(3bi,8) - 25;
+print(tobase(a,3).Cnt('2'))
