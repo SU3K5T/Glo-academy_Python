@@ -1,0 +1,6 @@
+###
+uses school;
+for var i := 2 to 36 do
+  for var j := 2 to 36 do 
+  if ((tobase(87,i)) = (tobase(73,j))) and ((tobase(62,i) = tobase(52,j))) then
+    print(i,j)
