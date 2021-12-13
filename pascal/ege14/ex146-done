@@ -1,0 +1,4 @@
+###
+uses school;
+var a := power(100bi,20) - power(10bi,15) + 10;
+pr(tobase(a,10).Cnt('0'))
