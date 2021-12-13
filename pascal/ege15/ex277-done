@@ -1,0 +1,17 @@
+###
+uses school; var m:=0;
+for var a1 := -100 to 100 do
+  for var a2 := -100 to 100 do
+  begin
+    var f := True;
+    var a := range(a1,a2);
+    for var x := -100 to 100 do
+      if (( (x in a) <= (x*x <= 100) ) and ( (x*x <= 16) <= (x in A) )) = false then
+      begin
+        f := false;
+      end;
+      if f then
+        m:=max(a2-a1,m);
+        //println(a1,a2)
+  end;
+  print(m);
