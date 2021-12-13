@@ -1,0 +1,20 @@
+###
+uses school;
+for var a1 := -100 to 100 do
+  for var a2 := -100 to 100 do
+    begin
+    var f := true;
+    var a := range(a1,a2);
+    var min := 9898989;
+    for var x := -100 to 1000 do
+      if ( (x in a) <= (x**2 <= 25) ) and ( (x**2 <= 16) <= (x in a) ) = false then
+      begin
+        f := false;
+        break
+      end;
+      if f = true then
+        println(a1,a2)
+      end;
+      
+
+//Лихолетов 
