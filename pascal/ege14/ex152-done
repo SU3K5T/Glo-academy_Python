@@ -1,0 +1,4 @@
+###
+uses school;
+var a := power(125bi,4) - power(25bi, 4) + 9;
+print(tobase(a,5).cnt('4'));
