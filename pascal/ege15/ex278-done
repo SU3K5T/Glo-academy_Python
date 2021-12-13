@@ -1,0 +1,19 @@
+###
+uses school;
+var mx := 0;
+for var a1 := -100 to 100 do
+  for var a2 := a1+1 to 100 do
+  begin
+    var f := true;
+    var a := range(a1,a2);
+    for var x:= -100 to 1000 do
+      if (( (x in a) <= (x*x <= 81) ) and ( (x*x <= 64) <= (x in a) )) = false then
+      begin
+        f := false;
+        break
+      end;
+      if f then
+        mx := max(a2-a1, mx)
+  end;
+  println(mx)
+  //Лихолетов Игора
