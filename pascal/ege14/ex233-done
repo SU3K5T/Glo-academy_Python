@@ -1,0 +1,4 @@
+###
+uses school;
+var a := tobase(7 * power(6561bi, 46) + 8 * power(729bi, 15) - 6 * 5832, 9);
+pr(a.countof('7'))
