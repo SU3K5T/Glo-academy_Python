@@ -1,0 +1,5 @@
+###
+uses school;
+for var i := 4 to 36 do
+  if dec('12',i) * dec('13',i) = dec('211',i) then
+    pr(i)
