@@ -1,0 +1,4 @@
+###
+uses school;
+var a := tobase(power(2bi, 5) * power(3bi, 25),3);
+pr(a.CountOf('0'), a.CountOf('1'), a.CountOf('2'));
