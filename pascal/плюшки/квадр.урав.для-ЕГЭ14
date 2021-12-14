@@ -1,0 +1,8 @@
+###
+uses school;
+var x := *;
+var bx := ;
+var c := ;
+var d := bx*bx - 4*x*c;
+var x1 := (-bx + trunc(sqrt(d))) div 2*x;
+pr(x1)
