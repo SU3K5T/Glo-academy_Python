@@ -4,7 +4,7 @@ for var a:=1 to 1000 do
 begin
   var flag := true;
   for var x := 1 to 1000 do
-    if ((21 mod a = 0) and ((x mod 40 = 0) and (x mod 30 = 0)) <= (x mod a = 0))= false then
+    if ((21 mod a = 0) and (((x mod 40 = 0) and (x mod 30 = 0)) <= (x mod a = 0)))= false then
     begin
       flag := false;
       break
