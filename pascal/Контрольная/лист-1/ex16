@@ -1,0 +1,13 @@
+###
+uses school;
+var a:array [-9898..100] of integer;
+for var i := -98 to 3 do
+  a[i] := i;
+for var i := 4 to 100 do
+begin
+  if i <= 32 then
+    a[i] += a[i div 4] + a[i-3];
+  if i > 32 then
+    a[i] += a[i - 5]
+end;
+pr(a[100])
