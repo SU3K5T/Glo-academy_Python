@@ -1,0 +1,5 @@
+###
+uses school;
+for var x := 5 to 36 do
+  if (dec('224',x) + 1) = (dec('101',8)) then
+    pr(x)
