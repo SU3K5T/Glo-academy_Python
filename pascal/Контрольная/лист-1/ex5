@@ -1,0 +1,23 @@
+###
+uses school;
+for var i := 1 to 10000 do
+begin
+  var n := i;
+  var s := bin(i);
+  s += s[s.cnt];
+  if s.CountOf('1') mod 2 = 0 then
+    s += '0'
+  else 
+    s += '1';
+   if s.CountOf('1') mod 2 = 0 then
+    s += '0'
+  else 
+    s += '1';
+  var r := dec(s,2);
+  if r > 97 then
+    begin
+    pr(i);
+  break
+  end;
+  
+end;
