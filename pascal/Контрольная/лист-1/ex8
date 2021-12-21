@@ -1,0 +1,17 @@
+###
+uses school;
+var s := '5'*400;
+var k := 0;
+while ('555' in s) or ('333' in s) do
+begin
+  if ('555' in s) then
+    s := s.replace('555', '3', 1)
+  else
+    begin
+    s := s.replace('333', '5', 1);
+    k += 3;
+    end;
+end;
+pr(k)
+
+//показывает сколько троек было удалено
