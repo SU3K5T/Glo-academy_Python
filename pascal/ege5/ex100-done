@@ -1,0 +1,20 @@
+###
+uses school;
+{function SS(x:integer):string;
+begin
+  var p1 := x div 10000;
+  var p2 := x div 1000 mod 10;
+  var p3 := x div 100 mod 10;
+  var p4 := x mod 100 div 10;
+  var p5 := x mod 10;
+  var res1 := p1 + p3 + p5;
+  var res2 := p2 + p4;
+  SS := inttostr(min(res1, res2)) + inttostr(max(res1, res2));
+end;
+for var i := 10000 to 99999 do
+  if (ss(i) = '723') then
+    begin
+      print(i);
+      break
+    end;}
+(10000..99999).Sel(z →digits(z)).Wh(i →inttostr(min((i[0]+i[2]+i[4]), (i[1]+i[3])))+inttostr(max((i[0]+i[2]+i[4]), (i[1]+i[3])))='723').pr
