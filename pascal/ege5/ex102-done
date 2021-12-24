@@ -1,0 +1,11 @@
+###
+uses school;
+for var i:=10 to 99 do
+begin
+  if (i mod 4 = 3) and (i mod 2 = 1) and (i mod 3 = 1) then
+    print(i);   
+end;
+Println();
+
+//(10..99).Wh(i →(i mod 4 = 3) and (i mod 2 = 1) and (i mod 3 = 2)).min.pr
+  
