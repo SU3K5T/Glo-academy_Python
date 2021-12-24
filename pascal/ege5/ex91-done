@@ -1,0 +1,19 @@
+###
+uses school;
+for var i := 1 to 1000 do 
+begin
+  var n := bin(i);
+  if (n.Cnt('1') mod 2 = 0) then
+    n += 0
+  else 
+    n += 1;
+  if (n.Cnt('1') mod 2 = 0) then
+    n += 0
+  else 
+    n += 1;
+  if dec(n,2) > 96 then
+  begin
+    print(i);
+    break
+  end;
+end;
