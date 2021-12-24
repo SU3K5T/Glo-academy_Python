@@ -1,0 +1,20 @@
+###
+uses school;
+function TS(x:integer):string;
+begin
+  var p3 := x mod 10;
+  var p2 := x div 10 mod 10;
+  var p1 := x div 100;
+  var res := p1 + p2;
+  var res2 := p2 + p3;
+  //Print(x);
+ // Println(inttostr(max(res,res2))+inttostr(min(res,res2)));
+  ts:=inttostr(min(res,res2))+inttostr(max(res,res2));
+  end;
+  var k:=0;
+for var i:=100 to 999 do
+  if (ts(i)='1216') then
+    k+=1;
+    Print(k);
+  
+  
