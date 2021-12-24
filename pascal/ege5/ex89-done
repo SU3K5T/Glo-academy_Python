@@ -1,0 +1,20 @@
+###
+uses school;
+for var i:=1 to 100 do
+begin
+  var n := bin(i);
+  if n.countof('1') mod 2 = 0 then
+    n += 0
+  else 
+    n += 1;
+  if n.countof('1') mod 2 = 0 then
+    n += 0
+  else 
+    n += 1;  
+  if (dec(n,2) > 121) then
+  begin
+    print(i);
+    break
+  end;
+end;
+  
