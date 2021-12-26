@@ -1,0 +1,3 @@
+###
+uses school;
+print((digits(tobase(4 * power(25bi,4) - power(5bi, 4) + 14,5).toi)).Sum)
