@@ -1,0 +1,5 @@
+###
+uses school;
+for var i := 2 to 36 do
+  if (tobase(87,i)[tobase(87,i).cnt] ='2') and (tobase(87,i).Cnt >2) then
+    pr(i)
