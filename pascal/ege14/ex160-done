@@ -1,0 +1,3 @@
+###
+uses school;
+pr(tobase(power(9bi, 20) + power(3bi, 60) - 25, 3).Cnt('2'));
