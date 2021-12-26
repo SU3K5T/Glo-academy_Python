@@ -1,0 +1,5 @@
+###
+uses school;
+for var i := 100 to 10000 do
+  if (tobase(i,16)[1] = '1') and (tobase(i,16)[3] = '0') and (tobase(i,16).Cnt=3) and (tobase(i,8)[1] = '5') and (tobase(i,8)[2] = '6') and (tobase(i,16).Cnt=3) then
+    print(i)
