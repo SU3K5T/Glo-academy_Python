@@ -1,0 +1,7 @@
+###
+uses school;
+var s := 0;
+var a := tobase(power(9bi, 5) + power(3bi,25) - 20, 3);
+for var i := 1 to a.cnt do
+  s += strtoint(a[i]);
+pr(s)
