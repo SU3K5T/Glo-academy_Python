@@ -1,0 +1,17 @@
+###
+uses school;
+var p := range(0,20);
+var q := range(5,15);
+var r := range(35,50);
+var a := range(-15,-5);
+var f := true;
+for var x := 1 to 1000 do
+  if (( (x in p) <= (x in q) ) or ( (x in a) <= (x in r) )) = false then
+  begin
+    f := false;
+    break
+  end;
+  if f then
+    pr('yes')
+  else 
+    pr('no')
