@@ -1,0 +1,4 @@
+  ###
+  uses school;
+  println(dec('18F', 16));
+  print(dec('727', 8))
