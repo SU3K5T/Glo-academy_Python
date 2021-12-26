@@ -1,0 +1,23 @@
+###
+uses school;
+var p := range(8,16);
+var q := range(25,40);
+var mn := 0;
+for var a1:=-100 to 100 do
+  for var a2 := -100 to 100 do
+  begin
+    var a := range(a1,a2);
+    var flag := true;
+    for var x := -100 to 1000 do
+    if (((x in p) or (x in q)) <= (x in a)) = false then
+    begin
+      flag := false;
+      break
+    end;
+    if flag then
+      mn := min(a2-a1,mn);
+  end;
+  print(mn)
+  
+  
+  
