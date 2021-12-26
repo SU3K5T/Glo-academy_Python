@@ -1,0 +1,16 @@
+###
+uses school;
+var a := tobase(power(9bi,17) + power(3bi, 16) - 27, 3);
+var k0 := 0;
+var k1 := 0;
+var k2 := 0;
+for var i:= 1 to a.cnt do
+  begin
+  if a[i] = '0' then
+    k0 += 1;
+  if a[i] = '1' then
+    k1 += 1;
+  if a[i] = '2' then
+    k2 += 1;
+  end;
+  pr(max(k0,k1,k2))
