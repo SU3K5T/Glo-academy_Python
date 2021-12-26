@@ -1,0 +1,5 @@
+###
+uses school;
+for var i:= 1 to 10000 do
+  if (tobase(i,16)[1]='E' ) and (tobase(i,16).Cnt=2) and (tobase(i,8)[2]='5' ) and (tobase(i,8).Cnt=3) and (tobase(i,4)[4]='1' ) and (tobase(i,4).Cnt=4) and (tobase(i,2)[6]='1' ) and (tobase(i,2).Cnt=8) then
+    println(i)
