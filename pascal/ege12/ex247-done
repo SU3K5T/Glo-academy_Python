@@ -1,0 +1,17 @@
+###
+uses school;
+var min := 9090090909;
+for var i := 50 to 100 do
+begin
+  var s := '1' * i;
+  while ('111' in s) do
+  begin
+    s := s.replace('111','22',1);
+    s := s.replace('222','11',1);
+  end;
+  if (s.countof('1') < min) then
+    begin
+    min := s.CountOf('1');
+    print(i);
+    end;
+end;
