@@ -1,0 +1,3 @@
+###
+uses school;
+'айсберг'.prm(7).Sel( a→ a.str).Wh(a-> (a[1] <> 'й') and not('йа' in a) and not('йе' in a)).Cnt.Pr
