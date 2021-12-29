@@ -1,0 +1,3 @@
+###
+uses school;
+'крот'.Cart(6).Sel(a → a.str).wh(a → a.cnt('о') = 1).Cnt.pr
