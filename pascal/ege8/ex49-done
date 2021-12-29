@@ -1,0 +1,3 @@
+###
+uses school;
+'катер'.Cart(3).Dst.Wh(a → a.Cnt('р') >= 2).Cnt.pr
