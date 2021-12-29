@@ -1,0 +1,3 @@
+###
+uses school;
+print(dec('20210', 3))
