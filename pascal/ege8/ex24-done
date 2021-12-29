@@ -1,0 +1,3 @@
+###
+uses school;
+'март'.cart(6).Sel(a → a.str).wh(a → a.cnt('р') =  2).cnt.pr
