@@ -1,0 +1,3 @@
+###
+uses school;
+tobase('237', 3).Replace('2', 'Р').Replace('1', 'О').Replace('0', 'К').pr
