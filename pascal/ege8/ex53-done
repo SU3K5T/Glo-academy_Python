@@ -1,0 +1,3 @@
+###
+uses school;
+'муха'.Cart(5).Dst.Sel(a → a.str).Wh(a → a.cnt('у') <= 3).Cnt.Pr
