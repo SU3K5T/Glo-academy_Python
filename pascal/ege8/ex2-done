@@ -1,0 +1,3 @@
+###
+uses school;
+tobase(124,3).replace('0', 'А').replace('1', 'О').replace('2', 'У').pr
