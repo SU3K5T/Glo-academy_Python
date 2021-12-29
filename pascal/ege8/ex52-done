@@ -1,0 +1,3 @@
+###
+uses school;
+'комар'.cart(4).Dst.wh(a → a.Cnt('а') <= 3).Cnt.Pr
