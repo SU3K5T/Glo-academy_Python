@@ -1,0 +1,3 @@
+###
+uses school;
+print(dec('31012', 4) - dec('21013', 4) + 1)
