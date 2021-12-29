@@ -1,0 +1,3 @@
+###
+uses school;
+'лето'.cart(4).Dst.Wh(a → a.cnt('е') >= 1).Cnt.pr
