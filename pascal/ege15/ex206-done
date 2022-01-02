@@ -1,0 +1,16 @@
+###
+uses school;
+var k := 0;
+for var a:=1 to 100 do
+begin
+  var flag := true;
+  for var x := 1 to 1000 do
+    if ((x and 7  <> 0) <= ((x and a <> 0) <= (x and 54 <> 0))) <= ((x and 27  = 0) and (x and a <> 0) and (x and 7 <> 0)) then
+    begin
+      flag := false;
+      break
+    end;
+  if flag then
+    k += 1;
+end;
+print(k)
