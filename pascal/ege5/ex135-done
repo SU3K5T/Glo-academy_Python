@@ -1,0 +1,18 @@
+###
+uses school;
+var k := 0;
+for var i := 1 to 10000 do
+begin
+  var n := bin(i);
+  if n.Cnt('1') mod 2 = 0 then
+    n += '1'
+  else
+    n += '0';
+  if n.Cnt('1') mod 2 = 0 then
+    n += '1'
+  else
+    n += '0';
+  if (dec(n,2) >= 16) and (dec(n,2) <= 32) then
+    k += 1;
+end;
+print(k)
