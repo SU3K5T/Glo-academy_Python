@@ -1,0 +1,15 @@
+###
+uses school;
+for var i := 1 to 10000 do
+begin
+  var n := bin(i);
+  if i mod 2 = 0 then
+    n += '00'
+  else 
+    n += '11';
+  if dec(n,2) > 115 then
+  begin
+    print(i);
+    break
+  end;
+end;
