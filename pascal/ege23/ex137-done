@@ -1,0 +1,11 @@
+###
+uses school;
+var a:array [-234..20000] of integer;
+a [Dec('100',2)] := 1;
+for var i := Dec('100',2) to  dec('1100',2) do
+begin
+  a[i] += a[i-1];
+  if (dec(('1'+'0'*((bin(i).Cnt)-1)),2)<>i) then
+  a[i] +=  a[dec(('1'+'0'*((bin(i).Cnt)-1)),2)];
+end;
+print(a[ dec('1100',2)])
