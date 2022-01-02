@@ -1,0 +1,19 @@
+###
+uses school;
+function F(n:biginteger):biginteger;
+begin
+  if n <= 5 then
+    f := n;
+  if (n > 5) and (n mod 5 = 0) then
+    f := n + f(n div 5 + 1);
+  if (n > 5) and (n mod 5 <> 0) then
+    f := n + f(n + 6)
+end;
+begin
+  for var i := 130 to 200 do
+    if f(i) > 1000 then
+    begin
+      print(i);
+      break
+    end;
+end;
