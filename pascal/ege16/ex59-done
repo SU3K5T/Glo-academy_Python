@@ -1,0 +1,32 @@
+uses school;
+var a:array [1..1000] of integer;
+var k := 0;
+function TSS(x:integer):boolean;
+begin
+  var flag := true;
+  var sum :=  0;
+  while x <> 0 do
+  begin
+    sum += x mod 10;
+    x := x div 10;
+  end;
+  if sum <> 27 then
+    flag := false;
+  TSS := flag;
+end;
+begin
+  for var i := 1000 downto 1 do
+  begin
+    if i > 30 then
+      a[i] := i * i + 5 * i + 4;
+    if i <= 30 then
+    begin
+      if i mod 2 = 0 then
+        a[i] := a[i + 1] + 3 * a[i + 4];
+      if i mod 2 <> 0 then
+        a[i] := 2 * a[i + 2] + a[i + 5];
+    end;
+    if TSS(a[i]) then
+      k += 1;
+  end;
+  print(k)
