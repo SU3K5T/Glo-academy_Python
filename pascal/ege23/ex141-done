@@ -1,0 +1,13 @@
+###
+uses school;
+var a:array [-234..10000] of integer;
+a[dec('10', 3)] := 1;
+for var i := dec('10', 3) to dec('212', 3) do
+begin
+  a[i] += a[i-2];
+  var z:=tobase(i,3);
+  z[z.cnt] := '0';
+  if (i mod 3 <> 0) then
+    a[i] +=  a[dec(z,3)];
+end;
+print(a[dec('212', 3)])
