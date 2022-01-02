@@ -1,0 +1,17 @@
+//###
+//uses school;
+//var mx := -99;
+//for var a := 10 to 50 do
+//begin
+//  var flag := true;
+//  for var x := 1 to 1000 do
+//    if ((((x and 56 <> 0) <= (x and 18 <> 0)) or (x and a <> 0)) <= ((x and 18 = 0) and (x and a = 0) and (x and 43 <> 0))) then
+//    begin
+//      flag := false;
+//      break
+//    end;
+//    if flag then
+//      if a > mx then
+//        mx := a
+//end;
+//print(mx)
