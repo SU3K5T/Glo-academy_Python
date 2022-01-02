@@ -1,0 +1,35 @@
+uses school;
+function isValid(x:biginteger):boolean ;
+begin
+  var flag := true;
+  while x <> 0 do
+  begin
+    var t := x mod 10;
+    if t = 0 then
+      begin
+      flag := false;
+      break
+      end;
+    x := x div 10;
+  end;
+  isValid := flag
+end;
+begin
+var k := 0;
+var a: array [1..1000] of integer;
+for var i := 1000 downto 1 do
+begin
+  if i > 25 then
+    a[i] := i * i + 2* i + 1;
+  if (i <= 25) then
+  begin
+    if i mod 2 = 0 then
+       a[i] := 2 * a[i + 1] + a[i + 3];
+    if i mod 2 <> 0 then
+      a[i] := a[i + 2] + 3 * a[i + 5];
+  end;
+   if (isValid(a[i])){((inttostr(a[i])).countof('0')=0)}  then
+     k += 1 
+end;
+print(k)
+end.
