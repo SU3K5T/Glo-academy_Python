@@ -1,0 +1,22 @@
+15.107
+###
+uses school;
+var p := range(12,26);
+var q := range(30,53);
+var max := 0;
+for var a1 := 1 to 100 do
+  for var a2 := a1+1 to 101 do
+  begin
+    var flag := True;
+    var a := range(a1,a2);
+    for var x := 1 to 1000 do
+      if (((x in a) <= (x in p)) or (x in q)) = false then
+      begin
+        flag := false;
+        break
+      end;
+      if flag then
+        if a2-a1 > max then
+          max := a2-a1;
+  end;
+  pr(max)
