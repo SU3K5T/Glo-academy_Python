@@ -1,0 +1,16 @@
+###
+uses school;
+for var i := 1 to 10000 do
+begin
+  var n := bin(i);
+  if n.countof('1') mod 2 = 0 then
+    n := n + '0'
+  else 
+    n := n + '1';
+  if n.countof('1') mod 2 = 0 then
+    n := n + '0'
+  else 
+    n := n + '1';
+  if dec(n,2) < 125 then
+    print(dec(n,2));
+end;
