@@ -1,0 +1,18 @@
+5.77
+###
+uses school;
+function SS(x:integer):string ;
+begin
+  var p4 := x mod 10;
+  var p3 := x mod 100 div 10;
+  var p2 := x mod 1000 div 100;
+  var p1 := x div 1000;
+  var r1 := p1+p2;
+  var r2 := p3 + p4;
+  SS := inttostr(max(r1,r2)) + inttostr(min(r1,r2))
+end;
+for var i := 1000 to 9999 do 
+begin
+  if SS(i) = '1311' then
+    print(i)
+end;
