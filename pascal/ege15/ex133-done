@@ -1,0 +1,14 @@
+###
+uses school;
+for var a := 1 to 1000 do
+begin
+  var flag := true;
+  for var x := 1 to 1000 do
+    if (((x mod 40 = 0) or (x mod 64 = 0)) <= (x mod a = 0)) = false then
+    begin
+      flag := false;
+      break
+    end;
+    if flag then
+      pr(a)
+end;
