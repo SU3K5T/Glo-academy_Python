@@ -1,0 +1,23 @@
+var s := 0;
+procedure F
+    ( n: integer );
+begin
+  s += n + 1;
+  if n > 1 then begin
+    s += n + 5;
+    F(n-1);
+    F(n-2);
+  end;
+end;
+begin
+for var i := 1 to 100 do
+begin
+  s := 0;
+  f(i);
+  if s > 1000000 then
+    begin
+    print(i,s);
+    break
+    end;
+end;
+end.
