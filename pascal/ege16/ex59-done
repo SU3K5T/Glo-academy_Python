@@ -30,3 +30,4 @@ begin
       k += 1;
   end;
   print(k)
+end.
