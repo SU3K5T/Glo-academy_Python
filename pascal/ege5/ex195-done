@@ -1,0 +1,13 @@
+###
+uses school;
+for var i:= 1 to 10909 do
+begin
+  var n:= bin(i);
+  var s := digits(strToint64(n)).Sum mod 2;
+  n += s;
+  s := digits(strToint64(n)).Sum mod 2;
+  n += s;
+  var r := dec(n,2);
+  if r < 50 then
+    print(r)
+end;
