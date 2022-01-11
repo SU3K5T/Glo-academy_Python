@@ -1,0 +1,13 @@
+###
+uses school;
+for var i:= 1 to 10909 do
+  begin
+  var n:= bin(i);
+  if n.Cnt('1')  > n.Cnt('0') then
+    n += '1'
+  else 
+    n += '0';
+  var r := dec(n,2);
+  if r < 43 then
+    print(r);
+end;
