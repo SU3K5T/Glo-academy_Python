@@ -1,0 +1,6 @@
+###
+uses school;
+'абрикос'.Prm(7).Sel(a → a.str).Wh(a → (not('аи' in a) and not('ао' in a) and not('иа' in a) and not('ио' in a)
+ and not('оа' in a) and not('ои' in a)) and (not('бр' in a) and not('бк' in a) and not('бс' in a) and not('рб' in a)
+ and not('рк' in a) and not('рс' in a) and not('кб' in a) and not('кр' in a) and not('кс' in a) and not('сб' in a) 
+ and not('ср' in a) and not('ск' in a))).Cnt.pr
