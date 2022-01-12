@@ -1,0 +1,3 @@
+###
+uses school;
+'берклий'.dst.cart(4).Sel(a → a.str).Wh(a →( a[1] <> 'й') and (('е' in a) or ('и' in a))).Cnt.pr
