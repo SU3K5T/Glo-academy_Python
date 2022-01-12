@@ -1,0 +1,3 @@
+###
+uses school;
+'азимут'.dst.cart(6).wh(a → (a.cnt('з') +a.cnt('м') + a.cnt('т') >=3)).cnt.pr
