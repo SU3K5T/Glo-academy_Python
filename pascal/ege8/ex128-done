@@ -1,0 +1,3 @@
+###
+uses school;
+'апорт'.prm(5).Sel(a → a.str).dst.Wh(a → not('ао' in a) and not('оа' in a)).Cnt.Pr
