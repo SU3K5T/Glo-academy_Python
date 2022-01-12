@@ -1,0 +1,3 @@
+###
+uses school;
+ 'кабала'.Prm(6).Sel(a → a.str).dst.Wh(a → not('кк' in a) and not('аа' in a) and not('бб' in a) and not('лл' in a)).cnt.pr
