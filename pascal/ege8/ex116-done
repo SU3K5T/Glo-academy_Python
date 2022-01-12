@@ -1,0 +1,5 @@
+###
+uses school;
+'аджика'.prm(6).Sel(a → a.str).dst.Wh(a → not('аа' in a) and not('дд' in a) 
+and not('жж' in a) 
+and not('ии' in a) and not('кк' in a)).Cnt.pr
