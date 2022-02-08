@@ -1,0 +1,16 @@
+###
+uses school;
+var a := ReadAllText('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\k7data\k7-5.txt ');
+var (max,k) := (0,0);
+for var i:= 2 to length(a) do
+    if (a[i] = 'C') then 
+    k += 1
+  else
+    begin
+  if k > max then 
+    max := k;
+  k:=0; 
+end;
+ if k > max then 
+    max := k;
+print(max)
