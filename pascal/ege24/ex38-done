@@ -1,0 +1,8 @@
+###
+uses school;
+var k := 0;
+var s := ReadAllText('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\k7data\k7c-6.txt');
+for var i := 1 to s.Cnt-3 do
+  if (s[i] <> s[i+1]) and (s[i+1] <> s[i+2]) and (s[i+2] <> s[i]) then
+    k +=1;
+print(k); 
