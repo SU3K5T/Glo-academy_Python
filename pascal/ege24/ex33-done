@@ -1,0 +1,10 @@
+###
+uses school;
+var k := 0;
+var s := ReadAllText('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\k7data\k7c-1.txt');
+for var i := 1 to s.Cnt-2 do
+  if (s[i] in 'BCD') and (s[i+1] in 'BDE') and (s[i+2] in 'BCE') and (s[i] <> s[i+1]) 
+  and (s[i+1] <> s[i+2]) then
+    k +=1;
+    print(k);
+  
