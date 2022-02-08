@@ -1,0 +1,7 @@
+###
+uses school;
+var (k,max) := (0,0);
+var s := ReadAllText('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\k7data\k7b-4.txt');
+for var i := 1 to 10000 do 
+  if (('EBCF'*i+'EB') in s) then 
+    print(i*4+2)
