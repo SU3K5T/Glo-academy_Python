@@ -1,0 +1,11 @@
+###
+uses school;
+var a := ReadAllText('C:\Users\user\Desktop\Поляков 08.12.2021\24data\k7data\k7-m25.txt');
+var (k,z) := (0,0);
+for var i := 1 to a.Cnt-2 do
+  if (a[i] < a[i+1]) and (a[i+1] >  a[i+2]) then
+  begin
+    k += 1;
+    z := i;
+  end;
+  print(k, z-1)
