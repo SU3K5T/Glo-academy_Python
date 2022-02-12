@@ -1,0 +1,24 @@
+###
+uses school;
+var a := ReadAllText('C:\Users\user\Desktop\Поляков 08.12.2021\24data\k7data\k7-m2.txt');
+var (k,z,max) := (0,0,0);
+for var i:=1 to a.Cnt do
+  if a[i] = 'C' then 
+    k+=1
+  else 
+    begin
+    if k > 0 then 
+    begin
+      z += 1;
+      if k > max then 
+       max := k;
+    end;
+    k := 0;
+end;
+ if k > 0 then 
+    begin
+      z += 1;
+      if k > max then 
+       max := k;
+    end;
+    pr( max,z, a.Cnt)
