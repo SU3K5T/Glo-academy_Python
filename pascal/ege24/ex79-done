@@ -1,0 +1,16 @@
+###
+uses school;
+var a := ReadAllText('C:\Users\user\Desktop\Поляков 08.12.2021\24data\k8data\k8-3.txt');
+var (k,max) := (1,0);
+for var i := 1 to a.Cnt-1 do
+  if (a[i] <> a[i+1]) then 
+    k += 1
+  else 
+  begin
+    if k > max then
+      max := k;
+    k := 1;
+  end;
+ if k > max then
+      max := k;
+pr(max);
