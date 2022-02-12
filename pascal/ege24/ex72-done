@@ -1,0 +1,19 @@
+###
+uses school;
+var a := ReadAllText('C:\Users\user\Desktop\Поляков 08.12.2021\24data\k8data\k8-0.txt');
+var (k,max,z) := (1,0,'');
+for var i := 1 to a.Cnt - 1 do
+ if (a[i] = a[i+1]) then
+   k += 1
+ else
+ begin
+   if k =3then
+   begin
+    Println(a[i],3);
+   end;
+   k := 1;
+ end;
+ if k =3then
+   begin
+ Println(a[a.cnt],3);
+    end;
