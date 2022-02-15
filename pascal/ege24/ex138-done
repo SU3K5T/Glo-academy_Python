@@ -1,0 +1,11 @@
+###
+uses school;
+var a := ReadAllLines('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\24-s1.txt');
+var k := 0; var d:=a.Cnt-1;
+for var i:= 1 to d do
+begin
+  var s:=a[i];
+  if s.Cnt('K') > s.Cnt('U') then 
+    k += 1;
+end;
+print(k)
