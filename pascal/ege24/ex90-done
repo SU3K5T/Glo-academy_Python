@@ -1,0 +1,16 @@
+###
+uses school;
+var a := ReadAllText('\\Mac\Home\Downloads\ege2022kp\24data\24-1.txt');
+var (min, s) := (int.MaxValue, '');
+for var i := 1 to a.Cnt do
+  if a[i] in '1234567890' then 
+    s += a[i]
+  else 
+    begin
+    if (s <> '') and (s.toi < min) and (s.toi mod 2= 0) then
+      min := s.toi;  
+      s := '';
+    end;
+    if (s <> '') and (s.toi > min) and (s.toi mod 2 = 0) then
+      min := s.toi;
+print(min)
