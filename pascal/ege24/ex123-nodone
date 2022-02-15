@@ -1,0 +1,22 @@
+###
+uses school;
+var a := ReadAllText('\\Mac\Home\Downloads\ege2022kp\24data\24-1.txt');
+var (max, max1, fullMax, index1, index2) := (0,0,0,0,0);
+for var i:=2 to a.Cnt-2 do
+  begin
+  if (a[i] > a[i+1]) and (a[i] > a[i - 1])then
+    begin
+     max := ord(a[i]);
+     index1 := i;
+     end;
+  if max >max1 then 
+    begin
+    max1 := max;
+    index2 := i;
+    end;
+  if (index1-index2) > fullMax then
+    begin
+    fullMax := index1-index2;
+    end;
+  end;
+  print(fullMax)
