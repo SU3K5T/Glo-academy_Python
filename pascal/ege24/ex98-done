@@ -1,0 +1,16 @@
+###
+uses school;
+var a := ReadAllText('\\Mac\Home\Downloads\ege2022kp\24data\24.txt');
+var (len, max) := (1,0);
+var s:string;
+var s1:string;
+for var i := 1 to a.Cnt-2 do
+  begin
+  if (a[i] < a[i+1]) and (a[i+1] < a[i+2]) then
+    s += a[i] + a[i+1] + a[i+2];
+  if s.Cnt = 3 then
+    begin
+    print(s);
+    break
+    end;
+  end;
