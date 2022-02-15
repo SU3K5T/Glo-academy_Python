@@ -1,0 +1,8 @@
+###
+uses school;
+var a := ReadAllText('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\24-J5.txt');
+var k := 0;
+for var i := 3 to a.Cnt-2 do
+  if ((a[i-2] <> 'S') OR (a[i-1] <> 'T')) and ((a[i] = 'O') and (a[i+1] = 'C') and (a[i+2] = 'K')) then 
+    k += 1;
+  pr(k)
