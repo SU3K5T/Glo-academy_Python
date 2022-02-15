@@ -1,0 +1,16 @@
+###
+uses school;
+var (k,max) := (1,0);
+var a := ReadAllText('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\24-J2.txt ');
+for var i := 1 to a.Cnt-1 do 
+  if (a[i] = a[i+1]) then 
+   k += 1
+  else 
+  begin
+    if k > max then
+      max := k;
+    k := 1;
+  end;
+   if k > max then
+      max := k;
+  print(max)
