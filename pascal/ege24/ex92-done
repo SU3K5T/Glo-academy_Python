@@ -1,0 +1,30 @@
+###
+uses school;
+function isValid(n:integer):boolean ;
+begin
+  var flag := True;
+  while n <> 0 do
+  begin
+    if n mod 10 mod 2 <> 0 then 
+    begin
+      flag := False;
+      break
+    end;
+    n := n div 10;
+  end;
+  isValid := flag;
+end;
+var a := ReadAllText('\\Mac\Home\Downloads\ege2022kp\24data\24-1.txt');
+var (max, s) := (0, '');
+for var i := 1 to a.Cnt do
+  if a[i] in '1234567890' then 
+    s += a[i]
+  else 
+    begin
+    if (s <> '') and (s.toi > max) and (isValid(s.ToI)) then
+      max := s.toi;  
+      s := '';
+    end;
+    if (s <> '') and (s.toi > max) and (s.toi mod 2 = 0) then
+      max := s.toi;
+print(max)
