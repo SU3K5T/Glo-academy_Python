@@ -1,0 +1,8 @@
+###
+uses school;
+var a := ReadAllText('\\Mac\Home\Downloads\ege2022kp\24data\24-5.txt');
+var k := 0;
+for var i:= 1 to a.Cnt-1 do
+  if (a[i] = '(')  and (a[i+1] = ')') then
+    k+=1;
+ print(k)
