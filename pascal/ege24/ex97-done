@@ -1,0 +1,17 @@
+###
+uses school;
+var a := ReadAllText('\\Mac\Home\Downloads\ege2022kp\24data\24-4.txt');
+var (len, max, z) := (1,0,0);
+for var i := 1 to a.Cnt-1 do
+begin
+  if a[i] < a[i+1] then
+    len += 1
+  else 
+  begin
+    z := len;
+    if z > max then 
+      max := z;
+    len := 1;
+  end;
+end;
+print(max)
