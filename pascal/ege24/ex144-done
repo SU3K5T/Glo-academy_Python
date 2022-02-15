@@ -1,0 +1,16 @@
+###
+uses school;
+var a := ReadAllText('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\24-j6.txt');
+var (z,k) := (0,1);
+for var i := 1 to a.Cnt-1 do
+begin
+  if a[i] < a[i+1] then 
+    k += 1
+  else 
+  begin
+    if k = 5 then 
+     z += 1;
+    k := 1;
+  end;
+end;
+pr(z)
