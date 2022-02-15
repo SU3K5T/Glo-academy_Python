@@ -1,0 +1,8 @@
+###
+uses school;
+var a := ReadAllText('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\24-J4.txt');
+var k := 0;
+for var i := 2 to a.Cnt-4 do
+  if (a[i-1] <> 'J') and (a[i] = 'B') and (a[i+1] = 'O') and (a[i+2] = 'S') and (a[i+3] = 'S') and (a[i+4] <> 'J') then 
+    k += 1;
+  pr(k)
