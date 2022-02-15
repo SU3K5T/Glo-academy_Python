@@ -1,0 +1,7 @@
+###
+uses school;
+var (k,max) := (0,0);
+var s := ReadAllText('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\24-J1.txt ');
+for var i := 1 to 10000 do 
+  if (('КОТ'*i) in s) then 
+    print(i)
