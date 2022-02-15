@@ -1,0 +1,16 @@
+###
+uses school;
+var a := ReadAllLines('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\24-s1.txt');
+var k := 0;
+for var i := 0 to a.Cnt-1 do
+begin
+  var s := a[i]; var flag := false;
+  for var j := 1 to s.Cnt-2 do
+  begin
+    if (s[j] = 'A') and (s[j+2] = 'R') then
+      flag := true;
+  end;
+  if flag then 
+    k += 1 ;
+end;
+pr(k)
