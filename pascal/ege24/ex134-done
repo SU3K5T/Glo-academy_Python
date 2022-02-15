@@ -1,0 +1,2 @@
+###
+Pr(ReadAllText('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\24-J3.txt ').Matches('TIK').cnt+ReadAllText('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\24-J3.txt ').Matches('TOK').cnt );
