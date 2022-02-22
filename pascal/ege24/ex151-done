@@ -1,0 +1,8 @@
+###
+uses school;
+var a := ReadAllText('C:\Users\user\Desktop\Поляков 08.12.2021\24data\24-j9.txt');
+var (k,s) := (0,'');
+for var i:=1 to a.Cnt-4 do
+  if (a[i] = a[i+4]) and (a[i+1] = a[i+3]) then 
+    k += 1;
+print(k)
