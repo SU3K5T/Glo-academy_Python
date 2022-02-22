@@ -1,0 +1,9 @@
+###
+uses school;
+var a := ReadAllText('\\Mac\Home\Downloads\ege2022kp\24data\24-s2.txt ');
+var (k,z) := (0,'');
+for var i:=1 to a.Cnt-1 do
+  if (a[i] = 'A') then
+    len += 1
+ 
+  print(z,k)
