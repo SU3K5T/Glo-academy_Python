@@ -1,0 +1,12 @@
+###
+uses school;
+var a := ReadAllText('C:\Users\user\Desktop\Поляков 08.12.2021\24data\24-153.txt');
+var (min,s) := (int.MaxValue,0);
+for var i := 1 to a.Cnt-1 do
+  if a[i] = 'A' then 
+    s := i
+  else 
+    if (a[i]= 'F') and (a[i-1]<>'A') then 
+      if (i-s+1< min) then 
+        min := i-s+1;
+      print(min)
