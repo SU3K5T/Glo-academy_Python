@@ -1,0 +1,25 @@
+###
+uses school;
+var a := ReadAllLines('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\24-s1.txt');
+var (min,z,s,max,y,sum) := (int.MaxValue, 0, '',int.MinValue,'',0);
+for var i := 0 to a.Cnt-1 do
+  if a[i].Cnt('A') < min then
+    begin
+      min := a[i].Cnt('A');
+      z := i;
+    end;
+ var aoc : Array ['A'..'Z'] of integer;
+ for var i:= 1 to a[z].Cnt do
+   aoc[a[z][i]] += 1;
+ for var i:='A' to 'Z' do
+  if aoc[i] >= max then 
+     begin
+       max := aoc[i];
+       y := i;     
+     end;
+ for var i := 0 to a.Cnt-1 do
+ begin
+   var c := a[i];
+   sum += c.Matches(y).Cnt
+ end;
+ print(y, sum)
