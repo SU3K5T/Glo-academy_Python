@@ -1,9 +1,17 @@
 ###
 uses school;
-var a := ReadAllText('\\Mac\Home\Downloads\ege2022kp\24data\24-s2.txt ');
-var (k,z) := (0,'');
+var a := ReadAllText('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\24-s2.txt');
+var (max,z) := (0,'');
+var ca: Array ['A'..'Z'] of integer;
 for var i:=1 to a.Cnt-1 do
   if (a[i] = 'A') then
-    len += 1
+   ca[a[i+1]] += 1;
+for var i := 'A' to 'Z' do 
+  if ca[i] > max then 
+    begin
+      max := ca[i];
+      z := i;
+    end;
+  print(z,max)
  
-  print(z,k)
+  
