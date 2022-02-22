@@ -1,0 +1,25 @@
+###
+uses school; var e:char;
+var s:=ReadAllLines('C:\Users\user\Desktop\Полъяковъ новы ъ\24data\24-s1.txt');
+var (z,n,v,g):=(0,'',9999999,0);
+var h: array ['A'..'Z'] of integer;
+for var i:=0 to s.Cnt-1 do
+ if s[i].Cnt('A')<=v then
+  begin
+    v:=s[i].Cnt('A');
+    z:=i;
+  end;
+  n:=s[z];
+  for var i:=1 to n.cnt do
+    h[n[i]]+=1;
+  for var i:='A' to 'Z' do
+  if (h[i]>=g) then
+    begin
+    g:=h[i];
+    e:=i;
+    end;
+    z:=0;
+    for var i:=0 to s.cnt-1 do
+ z+=s[i].Cnt(e);
+ print(e, z)
+  
