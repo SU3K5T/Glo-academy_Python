@@ -1,0 +1,32 @@
+###
+uses school;
+var a := ReadAllLines('\\Mac\Home\Downloads\ege2022kp\24data\24-174.txt');
+var max := 3;
+var z := 0;
+var k:= 0;
+var h : Array ['A'..'Z'] of integer;
+for var i := 1 to a.Cnt-1 do
+begin
+  var flag := False;
+  if a[i].cnt('R') <= 30 then 
+    flag := True;
+  if flag then 
+    for var s := 1 to a[i].Cnt do
+       begin
+         for var j:='A' to 'Z' do
+            if a[i][s] = j then
+              for var n := s+1 to a[i].cnt do
+                if (a[i][n] = j) then
+                 begin
+                  z := n-s;
+                  if z  > 2 then 
+                     h[j] += 1;
+                  if z >= max then
+                    begin
+                    max := z;
+                    end;
+                  break
+                  end;
+        end; 
+end;
+print(max,h.sum);
