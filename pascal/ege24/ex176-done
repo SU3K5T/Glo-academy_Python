@@ -1,0 +1,20 @@
+###
+uses school;
+var a := ReadAllText('\\Mac\Home\Downloads\ege2022kp\24data\24-157.txt');
+var (z,h,k,max) := (0,0,0,int.MinValue);
+for var i := 1 to a.Cnt -2 do 
+begin 
+  z += 1;
+  if (a[i+1] = 'Q') and (a[i+2] = 'W') then
+  begin
+    k += 1;
+  end;
+  if k > 0 then 
+  begin
+    if z > max then 
+      max := z;
+    k := 0;
+    z := 0;
+end;
+end;
+print(max)
