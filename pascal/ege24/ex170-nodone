@@ -1,0 +1,15 @@
+###
+uses school;
+var a := ReadAllText('\\Mac\Home\Downloads\ege2022kp\24data\24-169.txt');
+var k := 0;
+var max := int.MinValue;
+for var i:=1 to a.Cnt-2 do
+  begin
+   if (((a[i] = 'X') and (a[i+2] = 'Z')) and (a[i+1] = 'Y')) or (((a[i] = 'Z') and (a[i+2] = 'X')) and (a[i+1] = 'Y')) then
+    k+=1
+   else 
+     if k > max then 
+       max := k;
+     k := 0;
+ end;
+print(max)
