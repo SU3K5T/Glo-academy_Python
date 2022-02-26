@@ -1,0 +1,21 @@
+###
+uses school;
+var a := ReadAllText('C:\Users\user\Desktop\Поляков 08.12.2021\24data\24-175.txt');
+var (z,h,k,max) := (0,0,0,int.MinValue);
+for var i := 1 to a.Cnt - 3 do 
+begin
+  if (a[i] = 'K') and (a[i+1] = 'E') and (a[i+2] = 'G') and (a[i+3] = 'E') then
+  begin
+    z += 3;
+    k += 1;
+  end;
+  z += 1;
+  if k > 2 then 
+  begin
+    if z > max then 
+      max := z;
+    k := 0;
+    z := 0;
+end;
+end;
+print(max)
