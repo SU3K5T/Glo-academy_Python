@@ -13,4 +13,4 @@ begin
 end;
 (1..30).Wh(i → (H(9,i+1) = 1) or (H(9,i*2) = 1) or (H(9+1,i) = 1) or (H(9*2,i) = 1)).min.Prln; //19
 (1..30).Wh(i → (H(9,i) = 2)).minmax.Prln;//20
-(1..30).Wh(i → (H(9,i) = 2)).cnt.Prln;//21
+(1..30).Wh(i → (H(9,i) = -2)).cnt.Prln;//21
