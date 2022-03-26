@@ -3,7 +3,7 @@ uses school;
 [cache]
 function H(x,y:int):int;
 begin
-  if ((x+y) <= 32) then H := 0 else 
+  if ((x+y) <= 81) then H := 0 else 
   begin 
     var a := |H(x+1,y),H(x+y,x),H(x+y,y)|;
     if (a.Cnt(0)>0) then H := 1 else 
@@ -11,4 +11,5 @@ begin
          H:= a.Max*(-1);
   end 
 end;
-()
+(1..73).Wh(i → ((H(7+1, i) =1) or (H(7, i+1) =1) or (H(7+i, i) =1) or (H(7, i+7) =1))).prln
+(1..73).Wh(i → (H(7, i) =2)).prln
