@@ -13,4 +13,4 @@ begin
 end;
 (1..63).Wh(i → (H(6+1, i) =1) or (H(6, i+1) =1) or (H(6*3, i) =1) or (H(6, i*3) =1)).min.prln;
 (1..63).Wh(i → (H(6, i) =2)).cnt.prln;
-(1..63).Wh(i → (H(6, i) =-1)).min.prln
+(1..63).Wh(i → (H(6, i) =-2)).min.prln
