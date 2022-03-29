@@ -1,0 +1,17 @@
+uses school,SF;
+var m:integer;
+[cache]
+function f(x,y,dl:int; q:array [,] of int):int;
+begin
+  if (x+1<=9) then f(x+1,y,dl+q[x+1,y],q);
+  if (y+1<=9) then f(x,y+1,dl+q[x,y+1],q);
+  if (x=9) and (y=9) then m := min(dl,m);
+end;
+begin
+  m := maxint;
+  var t := ReadAllLines('C:\Users\user\Desktop\поляков 27.01.22\18data\18-1.csv').
+  sel(s → (s.split(';').Wh(a → (a<>'') and (a<>',')).sel(e → e.toi)).toa).toa;
+  var q:= Matr(t);
+  f(0,0, q[0,0],q);
+  m.pr
+end.
