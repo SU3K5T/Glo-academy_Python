@@ -1,0 +1,19 @@
+uses school, SF;
+var m:int;
+var m1:int;
+[cache]
+function F(x,y,dl:int; q:array [,] of int):int ;
+begin
+  if (x+1<=9) then f(x+1,y,dl+q[x+1,y],q);
+  if (y-1>=0) then f(x,y-1,dl+q[x,y-1],q);
+  if (x=9) and (y=0) then begin m := max(dl,m); m1:= min(dl,m1); end;
+end;
+begin
+  m := -maxint;
+  m1 := maxint;
+  var t := ReadallLines('\\Mac\Home\Downloads\ege2022kp\18data\18-10.csv')
+  .Sel(s → (s.split(';').Wh(a → (a<>'') and (a<>',')).Sel(e → e.toi)).ToA).ToA;
+  var q := Matr(t);
+  f(0,9, q[0,9],q);
+  print(m,m1)
+end.
