@@ -1,0 +1,32 @@
+uses school,SF;
+var m,m1,m2,m3:int;
+[cache]
+function rightBottom(x,y,dl:int; q:array [,] of int):int;
+begin
+  if (x+1 <= 10) then rightBottom(x+1,y,dl+q[x+1,y],q);
+  if (y+1 <= 10) then rightBottom(x,y+1,dl+q[x,y+1],q);
+  if (x=10) and (y=10) then m := max(dl,m);
+end;
+function rightTop(x,y,dl:int; q:array [,] of int):int;
+begin
+  if (x+1 <= 10) then rightTop(x+1,y,dl+q[x+1,y],q);
+  if (y-1 >= 0) then rightTop(x,y-1,dl+q[x,y-1],q);
+  if (x=10) and (y=0) then m1 := max(dl,m1);
+end;
+function rightTop(x,y,dl:int; q:array [,] of int):int;
+begin
+  if (x+1 <= 10) then rightTop(x+1,y,dl+q[x+1,y],q);
+  if (y+1 <= 10) then rightTop(x,y+1,dl+q[x,y+1],q);
+  if (x=10) and (y=10) then m := max(dl,m);
+end;
+begin
+  m := -maxint;
+  m1 := -maxint;
+  m2 := -maxint;
+  m3 := -maxint;
+  var t := ReadAllLines('C:\Users\user\Desktop\поляков 27.01.22\18data\18-j2.csv').
+  sel(s → (s.split(';').Wh(a → (a<>'') and (a<>',')).sel(e → e.toi)).toa).toa;
+  var q:= Matr(t);
+  rightBottom(5,5, q[5,5], q);
+  m.Pr
+end.
