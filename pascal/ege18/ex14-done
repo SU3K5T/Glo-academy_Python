@@ -1,0 +1,36 @@
+######################### max ##########################
+uses school, SF;
+var m:int;
+[cache]
+function F(x,y,dl:int; q:array [,] of int):int ;
+begin
+  if (x+1<=9) then f(x+1,y,dl+q[x+1,y],q);
+  if (y+1<=9) then f(x,y+1,dl+q[x,y+1],q);
+  if (x=9) and (y=9) then m := max(dl,m);
+end;
+begin
+  m := -maxint;
+  var t := ReadallLines('\\Mac\Home\Downloads\ege2022kp\18data\18-7.csv')
+  .Sel(s → (s.split(';').Wh(a → (a<>'') and (a<>',')).Sel(e → e.toi)).ToA).ToA;
+  var q := Matr(t);
+  f(0,0, q[0,0],q);
+  m.Pr
+end.
+#################### min ########################## 
+uses school, SF;
+var m:int;
+[cache]
+function F(x,y,dl:int; q:array [,] of int):int ;
+begin
+  if (x+1<=9) then f(x+1,y,dl+q[x+1,y],q);
+  if (y+1<=9) then f(x,y+1,dl+q[x,y+1],q);
+  if (x=9) and (y=9) then m := min(dl,m);
+end;
+begin
+  m := maxint;
+  var t := ReadallLines('\\Mac\Home\Downloads\ege2022kp\18data\18-7.csv')
+  .Sel(s → (s.split(';').Wh(a → (a<>'') and (a<>',')).Sel(e → e.toi)).ToA).ToA;
+  var q := Matr(t);
+  f(0,0, q[0,0],q);
+  m.Pr
+end.
