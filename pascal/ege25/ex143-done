@@ -1,0 +1,6 @@
+###
+uses school;
+for var i := 33333 to 55555 do
+  if (i.isprime) and (i.Digits.Sum > 35) then
+    println(i,i.Digits.Sum)
+    
