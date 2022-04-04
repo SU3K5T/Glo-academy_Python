@@ -1,0 +1,14 @@
+###
+uses school;
+var s := 0;
+for var i := 2945 to 18294 do
+  begin
+  var k := 0;
+  for var j := 2 to trunc(sqrt(i)) do
+      if i mod (j*j) = 0 then 
+        k += 1;
+      if k = 0 then
+        s += Digits(i).Sum;
+      end;
+      print(s)
+      
