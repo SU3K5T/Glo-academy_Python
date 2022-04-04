@@ -1,0 +1,19 @@
+###
+uses school;
+for var i := 2000000 to 3000000 do
+begin
+  var m := 0;
+  var k := 0;
+  for var j := 1 to trunc(sqrt(i)) do
+
+    if (i mod j = 0) and (j <> i div j) then 
+        begin
+    if i div j - j <= 120 then 
+    begin
+      k += 1;
+      m := max(m,i div j)
+    end;
+    if k >= 3 then 
+      println(i,m)
+  end;
+end;
