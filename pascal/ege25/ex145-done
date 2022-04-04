@@ -1,0 +1,41 @@
+###
+uses school;
+function isValid(x:integer):boolean ;
+begin
+  var flag := true;
+  var s := 0;
+  while x <> 0 do 
+  begin
+    if x mod 10 >= 3 then
+      begin
+      flag := false;
+      break
+      end;
+    s += x mod 10;
+    x := x div 10;
+  end;
+  if s mod 10 <> 0 then 
+    flag := false;
+    isValid := flag;
+end;
+function countOfDividers(x:integer):integer ;
+begin
+  var k := 0;
+  for var i := 2 to x-1 do
+    if x mod i = 0 then 
+      k += 1;
+    countOfDividers := k;
+end;
+var k := 0;
+for var i := 1000000 to 1300000 do
+begin
+  if isValid(i) then
+  begin
+    k += 1;
+    if k mod 10 = 0 then 
+      begin
+      println(i,countOfDividers(i));
+     k := 0;
+     end;
+    end;
+end;
