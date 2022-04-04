@@ -1,0 +1,15 @@
+###
+uses school;
+for var i := 33333 to 55555 do
+begin
+  var s := 0;
+ for var j := 2 to trunc(sqrt(i)) do
+   if (i mod j = 0) and (j <> i div j) and (j.IsPrime) then 
+  begin
+    s += j;
+   if (i mod s = 0) and (s>250) then 
+     println(i,s)
+ end;
+ end;
+   
+    
