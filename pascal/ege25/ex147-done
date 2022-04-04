@@ -1,0 +1,8 @@
+//146
+###
+uses school;
+for var i := 103000000 to 104000000 do 
+begin
+  if i.Divisors.Wh(a → a mod 2 = 0).Cnt = 3 then 
+    println(i, i.Divisors[2])
+end;
