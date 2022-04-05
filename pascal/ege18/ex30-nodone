@@ -1,0 +1,15 @@
+###
+uses school;
+  var m := -maxreal;
+  var a := ReadallLines('C:\Users\user\Desktop\поляков 27.01.22\18data\18-14.csv').Sel(x → x.Replace(',','.').ToR).ToA;
+  var s := 0.0;
+ for var i := 1 to a.cnt-1 do
+    if (a[i-1] > a[i]) then 
+     s += a[i-1] 
+    else 
+    begin
+      m := max(s,m);
+      s := 0;    
+    end;
+  pr(trunc(m));
+
