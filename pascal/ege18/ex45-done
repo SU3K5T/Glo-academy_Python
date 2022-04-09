@@ -1,0 +1,27 @@
+###
+uses school;
+var k := 0;
+var a := ReadAllLines('\\Mac\Home\Downloads\ege2022kp\18data\18-k3.csv').Sel(x → x.toi).ToA;
+for var i := 0 to a.Cnt-7 do
+begin
+  if (a[i]+a[i+1])  mod 2 = 0 then 
+    k += 1;
+  if (a[i]+a[i+2]) mod 2 = 0 then 
+    k += 1;
+  if (a[i]+a[i+3]) mod 2 = 0 then 
+    k += 1;
+  if (a[i] + a[i+4]) mod 2  = 0 then 
+    k += 1;
+   if (a[i] + a[i+5]) mod 2 = 0 then 
+    k += 1;
+   if (a[i] + a[i+6]) mod 2 = 0 then 
+    k += 1;
+end;
+for var i := a.Cnt-7 to a.Cnt-2 do
+begin
+  if (a[i-1] + a[i]) mod 2 = 0 then 
+    k += 1;
+  if (a[i] + a[i+1]) mod 2 = 0 then 
+    k += 1;
+end;
+print(k)
