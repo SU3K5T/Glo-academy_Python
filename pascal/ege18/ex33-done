@@ -1,0 +1,14 @@
+###
+uses school;
+var m := -maxreal;
+var s := 0.0;
+var a := ReadAllLines('\\Mac\Home\Downloads\ege2022kp\18data\18-15.csv').Sel(x → x.replace(',','.').tor).ToA;
+for var i := 0 to a.cnt-2 do
+   if a[i] < a[i+1] then 
+     s += a[i]
+   else 
+   begin
+     m := max(s+a[i],m);
+     s := 0.0;
+   end;
+   pr(m)
