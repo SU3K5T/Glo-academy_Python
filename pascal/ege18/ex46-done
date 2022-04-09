@@ -1,0 +1,25 @@
+###
+uses school;
+var k := 0;
+var a := ReadAllLines('\\Mac\Home\Downloads\ege2022kp\18data\18-k3.csv').Sel(x → x.toi).ToA;
+for var i := 0 to a.Cnt-6 do
+begin
+  if ((a[i]+a[i+1])  > 1000) and ((a[i]+a[i+1])  < 1500) then 
+    k += 1;
+  if ((a[i]+a[i+2])  > 1000) and ((a[i]+a[i+2])  < 1500) then 
+    k += 1;
+  if ((a[i]+a[i+3])  > 1000) and ((a[i]+a[i+3])  < 1500) then 
+    k += 1;
+  if ((a[i]+a[i+4])  > 1000) and ((a[i]+a[i+4])  < 1500) then 
+    k += 1;
+   if ((a[i]+a[i+5])  > 1000) and ((a[i]+a[i+5])  < 1500) then 
+    k += 1;
+end;
+for var i := a.Cnt-6 to a.Cnt-2 do
+begin
+  if ((a[i]+a[i+1])  > 1000) and ((a[i]+a[i+1])  < 1500) then 
+    k += 1;
+  if ((a[i]+a[i-1])  > 1000) and ((a[i]+a[i-1])  < 1500) then 
+    k += 1;
+end;
+print(k)
