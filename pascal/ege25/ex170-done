@@ -1,0 +1,14 @@
+###
+uses school;
+var m := 0;
+var k := 0;
+for var i := 350000 to 400000 do
+begin
+  m := (divisors(i)[divisors(i).Cnt-2]-divisors(i)[1]);
+  if m mod 23 = 9 then 
+    if k < 6 then 
+      begin
+        println(i,m);
+        k += 1;
+    end;
+end;
