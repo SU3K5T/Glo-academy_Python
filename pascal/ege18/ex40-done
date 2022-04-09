@@ -1,0 +1,14 @@
+###
+uses school;
+var m := -maxint;
+var k := 0;
+var a := ReadAllLines('\\Mac\Home\Downloads\ege2022kp\18data\18-k1.csv').Sel(x → x.toi).ToA;
+for var i := 0 to a.cnt-2 do
+  if (a[i] mod 2 <> 0) and (a[i+1] mod 2 <> 0) then 
+    k +=1
+  else 
+  begin
+    m := max(k+1,m);
+    k := 0;
+  end;
+  print(m)
