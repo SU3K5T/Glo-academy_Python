@@ -1,0 +1,7 @@
+###
+uses school;
+for var i := 78000000 to 85000000 do 
+begin
+  if i.Divisors.Wh(a → a mod 2 <> 0).Cnt = 5 then 
+    println(i, i.Divisors.wh(a → a.isodd).Max)
+end;
