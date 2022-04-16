@@ -1,0 +1,19 @@
+uses school,SF;
+var m :integer;
+var m1:integer;
+[cache]
+function f(x,y,dl:int; q:array [,] of int):int;
+begin
+  if not((y in [2..6]) and (x=9)) and not((y in [5..11]) and (x=4)) and (x+1<=15) then f(x+1,y,dl+q[x+1,y],q);
+  if not((x in [2..9]) and (y=1)) and not((x in [5..12]) and (y=11)) and (y+1<=15) then f(x,y+1,dl+q[x,y+1],q);
+  if (x=15) and (y=15) then begin m := min(dl,m); m1:= max(dl,m1) end;
+end;
+begin
+  m := maxint;
+  m1 := -maxint;
+  var t := ReadAllLines('C:\Users\user\Desktop\ege2022kp (5)\18data\18-85.csv').
+  sel(s → (s.split(';').Wh(a → (a<>'') and (a<>',')).sel(e → e.toi)).toa).toa;
+  var q:= Matr(t);
+  f(0,0, q[0,0],q);
+  print(m1,m);
+end.
