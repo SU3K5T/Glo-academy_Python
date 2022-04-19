@@ -1,0 +1,45 @@
+A)########################################################
+########################################################
+uses school,SF;
+var m,m1:integer;
+[cache]
+function f(x,y,dl:int; q:array of array of int):int;
+begin
+  if (x+1<=9) and (dl+q[x+1,y]>100) then f(x+1,y,100,q) 
+   else if (x+1<=9) and (dl+q[x+1,y]>0) then f(x+1,y,dl+q[x+1,y],q);
+  if (y+1<=9) and (dl+q[x,y+1]>100) then f(x,y+1,100,q) 
+   else if (y+1<=9) and (dl+q[x,y+1]>0) then f(x,y+1,dl+q[x,y+1],q);
+  if (x=9) and (y=9) then m1:= max(dl,m1);
+end;
+begin
+  (m,m1):= (maxint,-maxint);
+  var t := ReadAllLines('C:\Users\user\Desktop\ege2022kp (5)\18data\18-107.csv')
+  .Sel(s → (s.split(';').Wh(a → (a<>'') and (a<>',')).sel(e → e.Toi)).toa).toa;
+  f(0, 0, t[0,0],t);
+  print(m1);
+end.
+
+
+
+B)########################################################
+########################################################
+uses school,SF;
+var m,m1:integer;
+[cache]
+function f(x,y,dl:int; q:array of array of int):int;
+begin
+  if (x+1<=9) and (dl+q[x+1,y]>100) then f(x+1,y,100,q) 
+   else if (x+1<=9) and (dl+q[x+1,y]>0) then f(x+1,y,dl+q[x+1,y],q)
+   else if (x+1<=9) and (dl+q[x+1,y]<0) then f(x+1,y,0,q);
+  if (y+1<=9) and (dl+q[x,y+1]>100) then f(x,y+1,100,q) 
+   else if (y+1<=9) and (dl+q[x,y+1]>0) then f(x,y+1,dl+q[x,y+1],q)
+   else if (y+1<=9) and (dl+q[x,y+1]<0) then f(x,y+1,0,q);
+  if (x=9) and (y=9) then m1:= max(dl,m1);
+end;
+begin
+  (m,m1):= (maxint,-maxint);
+  var t := ReadAllLines('C:\Users\user\Desktop\ege2022kp (5)\18data\18-107.csv')
+  .Sel(s → (s.split(';').Wh(a → (a<>'') and (a<>',')).sel(e → e.Toi)).toa).toa;
+  f(0, 0, t[0,0],t);
+  print(m1);
+end.
