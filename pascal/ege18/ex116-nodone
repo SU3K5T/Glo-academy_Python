@@ -1,0 +1,35 @@
+uses school, SF;
+var mn,mx:integer;
+[cache]
+function F(x,y,dl:int; q: array of array of integer):integer;
+begin
+    if not((x=4) and (y=1))
+    and not((x=8) and (y in [2..5]))
+    and not((x=10) and (y=5))
+    and not((x=11) and (y in [6..7]))
+    and not((x=3) and (y in [6..9]))
+    and not((x=5) and (y in [9..12]))
+    and not((x=6) and (y=13))
+    and (x-1>=0) 
+    then f(x-1,y,dl+q[x-1,y],q);
+    if not((y=0) and (x in [4..13]))
+    and not((y=3) and (x in [9..13]))
+    and not((y=4) and (x in [9..13]))
+    and not((y=4) and (x in [1..6]))
+    and not((y=7) and (x in [4..10]))
+    and not((y=8) and (x=4))
+    and not((y=10) and (x in [1..3]))
+    and not((y=10) and (x in [5..10]))
+    and ((y=12) and (x in [1..3]))
+    and ((y=12) and (x in [7..13]))
+    and (y+1<=14)
+    then f(x,y+1,q[x,y+1],q);
+    if (x=0) and (y=14) then begin mn := min(dl,mn); mx := max(dl,mx) end;
+end; 
+begin
+(mn,mx) := (maxint,-maxint);
+var t := ReadAllLines('C:\Users\user\Desktop\ege 18\18-116.csv')
+.sel(s → (s.split(';').wh(a → (a<>'') and (a<>',')).sel(e → e.toi)).toa).toa;
+f(14,0,t[14,0],t);
+pr(mx,mn)
+end.
