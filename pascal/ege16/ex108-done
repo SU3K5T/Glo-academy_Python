@@ -1,0 +1,13 @@
+uses school,SF;
+function f(n:integer):real;
+begin
+  if n = 0 then 
+    f := 1;
+  if (n mod 2 = 0) and (n > 0) then 
+    f := f(n-1) + f(n-2);
+  if (n mod 2 <> 0) and (n > 0) then 
+    f := 1.5*f(n-1);
+end;
+begin
+(digits(trunc(f(15))).Cnt).pr;
+end.
