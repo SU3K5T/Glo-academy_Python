@@ -1,0 +1,17 @@
+uses school,SF;
+[cache]
+function F(n:integer):integer;
+begin
+  if n <= 3 then
+    f := n + 3;
+  if (n>3) and (F(n-1) mod 2 = 0) then 
+    f := f(n-2) + n;
+  if (n>3) and (F(n-1) mod 2 <> 0) then 
+    f := f(n-2) + 2*n;
+end;
+begin
+var s := 0;
+for var i := 40 to 50 do
+  s += f(i);
+  print(s)
+end.
