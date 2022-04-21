@@ -1,0 +1,17 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-1.txt');
+var (s,n) := ReadlnInteger2;
+var a := ReadArrInteger(n); var (sum,z,c) := (0,0,0);
+a.sort;
+for var i := 0 to n-1 do
+  if (sum+a[i]<=s) then 
+  begin
+    sum += a[i];
+    z := i;
+  end;
+  Print(z+1);
+  for var i := z+1 to a.cnt-1 do
+    if sum-a[z]+a[i] <= s then 
+      c := a[i];
+    print(c)
