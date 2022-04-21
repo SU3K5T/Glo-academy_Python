@@ -1,0 +1,7 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-k4.txt');
+var (n,k) := ReadlnInteger2;
+var a := ReadArrInteger(n);
+a.SortDescending;
+print(trunc(a[k:k+k].Av), trunc(a[0:k].Av))
