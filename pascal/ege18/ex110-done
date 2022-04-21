@@ -1,0 +1,24 @@
+uses school, SF;
+var mn,mx:integer;
+[cache]
+function F(x,y,dl:int; q: array of array of integer):integer;
+begin
+  if (x-1>=0) then
+    if (q[x,y] < q[x-1,y]) then 
+      f(x-1,y,dl+q[x-1,y],q) 
+    else 
+      f(x-1,y,dl,q);
+   if (y+1<=14) then
+    if (q[x,y] < q[x,y+1]) then 
+      f(x,y+1,dl+q[x,y+1],q) 
+    else 
+      f(x,y+1,dl,q);
+    if (x=0) and (y=14) then begin mn := min(dl,mn); mx := max(dl,mx) end;
+end; 
+begin
+(mn,mx) := (maxint,-maxint);
+var t := ReadAllLines('C:\Users\user\Desktop\ege 18\18-109.csv')
+.sel(s → (s.split(';').wh(a → (a<>'') and (a<>',')).sel(e → e.toi)).toa).toa;
+f(14,0,t[14,0],t);
+pr(mx,mn)
+end.
