@@ -1,0 +1,12 @@
+###
+uses school;
+var r := 0;
+for var x := 10 to 99 do
+begin
+  var y1 := (x mod 4).tos;
+  var y2 := (x mod 3).tos;
+  var y3 := (x mod 2).tos;
+  if y1+y2+y3 = '220' then 
+       r := x;      
+end;
+r.pr
