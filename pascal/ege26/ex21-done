@@ -1,0 +1,10 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-k1.txt');
+var (n,k) := ReadlnInteger2;
+var a := ReadArrInteger(n);
+a.SortDescending;
+var sum := 0.0;
+for var i := 0 to k-1 do 
+  sum += a[i] * 0.2;
+  print(sum,a[k])
