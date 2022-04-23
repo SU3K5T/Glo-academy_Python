@@ -1,0 +1,15 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-j3.txt');
+var (s,n) := ReadlnInteger2;
+var a := ReadArrInteger(n); var (sum,k,c,z) := (0,0,0,0);
+a.SortDescending;
+for var i := 0 to n-1 do
+  if (sum+a[i]<=s) then 
+  begin
+    sum += a[i];
+    k += 1;
+    z := i;
+  end;
+  Print(k);
+  print(a[z])
