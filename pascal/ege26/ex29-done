@@ -1,0 +1,7 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-j4.txt');
+var n := ReadlnInteger;
+var a := ReadArrInteger(n); 
+a.Sort;
+print(a[1000:9000].Sum,a[8999]);
