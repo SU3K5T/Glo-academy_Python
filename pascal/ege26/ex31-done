@@ -1,0 +1,9 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-s1.txt');
+var n := ReadlnInteger;
+var a := ReadArrInteger(n); 
+a.Sort;
+//var t := a.Wh(a → (a<=100)).ToA.Sum;
+var u := a.Wh(a → (a>100)).ToA;
+print(round(a.Wh(a → (a<=100)).ToA.Sum+u[:u.Cnt div 2].Sum*0.9+u[u.Cnt div 2:].Sum), u[u.Cnt div 2 - 1]);
