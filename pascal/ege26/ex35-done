@@ -1,0 +1,11 @@
+###
+uses school;
+assign(input, '\\Mac\Home\Downloads\ege2022kp\26data\26-j7.txt');
+var n := ReadlnInteger; var a := ReadArrInteger(n);
+a.Sort;
+var sd := a.Sum*0.6;
+var b20 := a[trunc(n*0.8):].sum*0.8;
+var db := sd-b20;
+var kb := a[:trunc(n*0.8)].Sum;
+var pr := db/kb*a[0];
+print(pr,b20)
