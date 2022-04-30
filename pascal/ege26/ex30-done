@@ -1,0 +1,16 @@
+###
+uses school;
+assign(input, '\\Mac\Home\Downloads\ege2022kp\26data\26-J5.txt');
+var n := ReadLnInteger;
+var a := ReadArrInteger(n);
+var b:= new int[n]; var w := 0;
+(b[0],b[n-1]) := (a[0], a[n-1]);
+for var i := 1 to n-2 do 
+begin
+  var z := |a[i],a[i-1],a[i+1]|;
+  z.Sort;
+  if (a[i]-z[1]>0) then
+    w += a[i]-z[1];
+    b[i] := z[1];
+end;
+print(w,b.Cnt(b.Min))
