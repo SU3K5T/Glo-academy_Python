@@ -6,7 +6,7 @@ var a := (1..N).Sel(i → readinteger2).Sel(i → (i[1] div i[0], i[1], i[0])).T
 var s := 0;
 var z := 0;
 var mx := -maxint;
-sortdescending(a);
+a.SortDescending(i → i[2]);
 a.Sort(i → i[0]);
 for var i := 0 to k-1 do 
    begin
