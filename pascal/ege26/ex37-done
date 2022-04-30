@@ -1,0 +1,20 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-k6.txt');
+var (n,k) := ReadLninteger2;
+var a := (1..N).Sel(i → readinteger2).Sel(i → (i[1] div i[0], i[1], i[0])).ToA;
+var s := 0;
+var z := 0;
+var mx := -maxint;
+sortdescending(a);
+a.Sort(i → i[0]);
+for var i := 0 to k-1 do 
+   begin
+    s += a[i][2];
+    if a[i][2] > mx then 
+      begin
+       mx := max(a[i][2],mx);
+       z := a[i][1]
+    end;
+ end;
+print(s,z)
