@@ -1,0 +1,13 @@
+###
+uses school;
+assign(input, '\\Mac\Home\Downloads\ege2022kp\26data\26-J2.txt');
+var n := readlnInteger;
+var a := readArrInteger(n);
+a.Sort;
+var k := 0;
+var m := a[a.Cnt div 2 + 1];
+var sr := trunc(a[:].Av);
+for var i := 0 to n-1 do
+  if (a[i] <= m) and (a[i] > sr) then 
+    k += 1;
+ print(k)
