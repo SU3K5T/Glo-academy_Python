@@ -1,0 +1,21 @@
+###
+uses school;
+assign(input, '\\Mac\Home\Downloads\ege2022kp\26data\26-j6.txt');
+var n := ReadLninteger;
+var a := ReadArrInteger(n);
+a.Sort; var b := new real[n];
+for var i := 0 to n-1 do
+  b[i] := a[i]*0.8;
+var w := a.Sum*0.9;
+var z := 0;
+for var i := 0 to n-1 do
+  if (b.Sum-b[i]+a[i]<=w) then 
+    begin
+     b[i] := a[i];
+     z := i;
+    end;
+ var v := 0;
+ for var i := z+1 to n-1 do
+   if (b.Sum-b[z]+b[z]*0.8-b[i]+a[i]<=w) then
+       v := a[i];
+ print(v,z+1)
