@@ -1,0 +1,11 @@
+###
+uses school;
+assign(input, '\\Mac\Home\Downloads\ege2022kp\26data\26-j8.txt');
+var n := ReadlnInteger; var a := ReadArrInteger(n); a.Sort;
+var x := a[:trunc(n * 0.7)].ToA.Sum*0.7;
+var y := a[trunc(n*0.7):].ToA.Sum*0.6;
+var s:= x+y;
+var x1 := a[:trunc(n * 0.5)].ToA.Sum*0.6;
+var y1 := a[trunc(n*0.5):].ToA.Sum*0.65;
+var ss:= x1+y1;
+print(trunc(s-ss), a[n-1]*0.6)
