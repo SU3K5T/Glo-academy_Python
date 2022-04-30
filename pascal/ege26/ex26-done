@@ -1,0 +1,16 @@
+###
+uses school;
+assign(input, '\\Mac\Home\Downloads\ege2022kp\26data\26-J1.txt');
+var n := readlninteger;
+var a := ReadArrInteger(n);
+a.SortDescending;
+var k := 0;
+for var i := 0 to n-1 do 
+ for var j := i+1 to n-1 do
+   if a[i]+a[j] = 100 then 
+     begin
+       k += 1;
+       a[i] := 0;
+       a[j] := 0;
+     end;
+ k.Pr 
