@@ -1,0 +1,29 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-j9.txt');
+var (s,n) := ReadlnInteger2;
+var a := ReadArrInteger(n);
+a.SortDescending;
+var sum := 0;
+var z := 0;
+var k := 0;
+for var i:=0 to n-1 do
+  for var j:=n-1 downto 0 do
+    begin
+    if (sum+a[i]<=s) and (a[i]<>0) then 
+      begin
+      sum+=a[i];
+      k+=1;
+      z := a[i];
+      a[i] := 0;
+      end;
+    if (sum+a[j]<=s) and (a[j]<>0) then 
+      begin
+      sum += a[j];
+      k+=1;
+      z := a[j];
+      a[j] := 0;
+      break
+      end;
+    end;
+ print(k,z);
