@@ -1,0 +1,21 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-39.txt');
+var (n,m) := ReadlnInteger2;
+var a := ReadArrInteger(n); var (sum,k,z,x) := (0,0,0,0);
+a.sort;
+k := a.Cnt(x → x in [310..320]);
+sum := a.wh(t → t in [310..320]).Sum;
+a.Sort;
+for var i := 0 to n-1 do 
+  if (a[i]<>0) and (sum+a[i]<=m) then
+    begin
+    sum += a[i];
+    k += 1;
+    z := i;
+    end;
+ print(k);
+ for var i := z+1 to n-1 do 
+   if sum-a[z]+a[i]<=m then 
+     x := a[i];
+ print(sum+x-a[z]);
