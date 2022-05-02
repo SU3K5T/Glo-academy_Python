@@ -1,0 +1,12 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-j10.txt');
+var (d,e,n):=readlninteger3; var a := ReadArrInteger(n); a.Sort; var (k,z,x) := (0,0,0);
+var DD := a.Wh(t → t > 500).ToA; var DE := a.Wh(t → t <= 500).ToA;
+DD.Sort; DE.Sort;
+var (sd,se,kd,ke,zd,ze) := (0,0,0,0,0,0); var (cd,ce) := (0,0);
+for var i := 0 to DD.Cnt-1 do if (sd+DD[i]<=d) then (sd,kd,zd) := (sd+DD[i],kd+1,i);
+for var i := 0 to DE.Cnt-1 do if (se+DE[i]<=e) then (se,ke,ze) := (se+DE[i],ke+1,i);
+for var i := zd+1 to DD.Cnt-1 do if (sd-dd[zd]+dd[i]<=d) then cd := dd[i];
+for var i := ze+1 to DE.Cnt-1 do if (se-de[ze]+de[i]<=e) then ce := de[i];
+print(ke+kd,cd+ce)
