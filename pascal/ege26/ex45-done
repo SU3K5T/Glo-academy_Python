@@ -6,11 +6,10 @@ var a := REadArrinteger(n); a.Sort;
 var (k,mx) := (0,0);
 for var i :=  0 to a.Cnt-1 do 
  for var j := i+1 to a.Cnt-1 do 
-   if (a[i] <> a[j]) then 
       if (a[i] + a[j]) mod 2 = 0 then 
         if ((a[i] + a[j]) div 2)  in a then
         begin
           k += 1;
-          mx := max((a[i] + a[j]) div 2, mx)
+          mx := max((a[i] + a[j]) div 2, mx);
           end; 
     print(k,mx)
