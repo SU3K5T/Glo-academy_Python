@@ -1,10 +1,16 @@
 ###
 uses school;
-var (sumz,suma,kol) := (0,0,0);
-assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-45.txt');
+assign(input, 'C:\Users\user\Desktop\ege2022kp(09.10.2021)\26data\26-45.txt');
 var n := ReadLnInteger;
 var a := REadArrinteger(n); a.Sort;
+var (k,mx) := (0,0);
 for var i :=  0 to a.Cnt-1 do 
- for var j := 0 to a.Cnt-1 do 
-   if (a[i] <> a[j]) and (a[j] <> 0) and (a[i] <> 0) then 
-      if (a[i] + a[j]) mod 2 = 0 then
+ for var j := i+1 to a.Cnt-1 do 
+   if (a[i] <> a[j]) then 
+      if (a[i] + a[j]) mod 2 = 0 then 
+        if ((a[i] + a[j]) div 2)  in a then
+        begin
+          k += 1;
+          mx := max((a[i] + a[j]) div 2, mx)
+          end; 
+    print(k,mx)
