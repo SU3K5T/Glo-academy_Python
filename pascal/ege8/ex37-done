@@ -1,0 +1,2 @@
+uses school;
+(abs('akpy'.cart(5).Sel(i → i.str).ToA.IndexOf('pykaa')-'akpy'.cart(5).Sel(i → i.str).ToA.IndexOf('ykapa'))+1).pr
