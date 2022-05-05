@@ -1,0 +1,2 @@
+uses school;
+ 'abcx'.cart(5).Dst.Sel(i → i.str).wh(i → (i.cnt('x')=0) or ((i[5]='x') and (i.cnt('x')=1))).Cnt.pr
