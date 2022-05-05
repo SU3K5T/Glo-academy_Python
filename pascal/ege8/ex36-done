@@ -1,0 +1,2 @@
+uses school;
+(abs('ampt'.Cart(4).Sel(i → i.str).ToA.IndexOf('mapt')-'ampt'.Cart(4).Sel(i → i.str).ToA.IndexOf('pamt'))+1).Pr;
