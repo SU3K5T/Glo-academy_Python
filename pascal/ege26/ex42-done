@@ -1,0 +1,23 @@
+###
+uses school;
+var (sumz,suma,kol) := (0,0,0);
+assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-42.txt');
+var (n,s) := ReadLnInteger2;
+var a := (1..n).Sel(i → (ReadString.Split)).Sel(i → (i[0], i[1].toi, i[2].toi)).ToA;
+var ta := a.wh(z → z[0]='A').ToA;  var tz := a.Wh(z → z[0]='Z').ToA;
+sumz := tz.sum(t → (t[1]*t[2]));
+ta.Sort(x → x[1]);
+var sumo:=s-sumz;
+for var i := 0 to ta.Cnt-1 do 
+  if (suma+ta[i][1]*ta[i][2]<=sumo) then 
+  begin
+    suma += ta[i][1]*ta[i][2];
+    kol += ta[i][2];
+  end
+  else
+  begin
+    var w := (sumo-suma) div ta[i][1];
+    suma += ta[i][1]*w;
+    kol += w;
+  end;
+  print(kol,sumo-suma)
