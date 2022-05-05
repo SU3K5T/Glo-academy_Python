@@ -1,0 +1,2 @@
+uses school;
+(abs('aoy'.Cart(5).Sel(i → i.str).toa.IndexOf('yayay')-'aoy'.Cart(5).Sel(i → i.str).toa.IndexOf('oyoya'))+1).pr
