@@ -1,0 +1,2 @@
+uses school;
+(abs('aznc'.Cart(5).Sel(i → i.str).ToA.IndexOf('cazan')-'aznc'.Cart(5).Sel(i → i.str).ToA.IndexOf('zanac'))+1).pr
