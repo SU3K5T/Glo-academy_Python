@@ -1,0 +1,2 @@
+uses school;
+(abs('dkmo'.Cart(5).Sel(i → i.str).ToA.IndexOf('domok')-'dkmo'.Cart(5).Sel(i → i.str).ToA.IndexOf('komod'))+1).pr
