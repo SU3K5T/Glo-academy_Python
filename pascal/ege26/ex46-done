@@ -1,0 +1,16 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2022kp(09.10.2021)\26data\26-46.txt');
+var n := ReadLnInteger;
+var a := REadArrinteger(n); a.Sort;
+var (k,mn) := (0,maxint);
+for var i :=  0 to a.Cnt-1 do 
+ for var j := i+1 to a.Cnt-1 do 
+   for var m := j+1 to a.Cnt-1 do 
+      if (a[i] + a[j] + a[m]) mod 3 = 0 then 
+        if (((a[i] + a[j]) + a[m]) div 3)  in a then
+        begin
+          k += 1;
+          mn := min((a[i] + a[j] + a[m]) div 3, mn);
+          end; 
+    print(k,mn)
