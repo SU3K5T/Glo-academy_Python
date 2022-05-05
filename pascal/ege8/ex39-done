@@ -1,0 +1,2 @@
+uses school;
+('abcdx').Cart(4).Sel(i → i.str).Wh(i → i.cnt('x')=1).Cnt.Pr;
