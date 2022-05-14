@@ -1,0 +1,22 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-48.txt');
+var n := Readlninteger;
+var a := ReadArrInteger(n); 
+a.Sort;
+var (kk,mn) := (0,maxint);
+for var i := 0 to a.Cnt-2 do
+  for var j := i+1 to a.Cnt-1 do
+    if ((a[i]+a[j]) mod 2 = 0) then 
+      begin
+        var k := maxint;
+        var t := (a[i]+a[j]) div 2;
+         for var z := 0 to a.Cnt-1 do
+           k := min(abs(a[z]-t),k);
+           if k = 5 then 
+             begin
+             kk += 1;
+             mn := min(t,mn)
+             end;
+      end;
+      print(kk,mn)
