@@ -1,0 +1,16 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2022kp (5)\26data\26-51.txt');
+var n := Readlninteger;
+var a := ReadArrInteger(n); 
+a.Sort;
+var (k,mx) := (0,-maxint);
+for var i := 0 to n-2 do 
+  for var j := i+1 to n-1 do 
+    if j-i>100 then
+      if ((a[i]+a[j])mod 2 = 0) then 
+        begin
+        k +=1;
+        mx := max((a[i]+a[j]) div 2,mx)
+        end;
+ print(k,mx)
