@@ -1,0 +1,21 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Downloads\26data\26-55.txt');
+var (n,s) := ReadLnINteger2;
+var a := ReadArrInteger(n);
+a.SortDescending;
+var (sum,z) := (0,0);
+for var i := 0 to n-1 do 
+  if sum+a[i]<s then 
+    sum += a[i]
+  else 
+  begin
+    a.Sort;
+    for var j := i to n-1 do 
+       if sum+a[j]<s then 
+         begin
+         sum+=a[j];
+         z := a[i];
+         end;
+    end;
+    print(z)
