@@ -1,0 +1,11 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2021kp (02.04.2021)\26data\26-53.txt');
+var n := ReadLnInteger;
+var a := ReadArrInteger(n);
+var (k,mn) := (0,maxint);
+for var i := 0 to n-2 do
+  for var j := i+1 to n-1 do
+    if (a[i] mod 2 = 0) and (a[j] mod 2 = 0) and ((a[i]+a[j]) div 2 in a) then 
+      (k,mn) := (k+1, min((a[i]+a[j]) div 2, mn));
+   pr(k,mn)
