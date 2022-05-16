@@ -1,0 +1,37 @@
+//56
+###
+uses school;
+assign(input, 'C:\Users\user\Downloads\26data\26-56.txt');
+var (v,k,n) := ReadLnInteger3; // 8 дисков по 65000
+var a := (1..n).Sel(x → readInteger).toa;
+a.SortDescending;
+var m := |v|*k;
+var z := 0;
+for var i := 0 to n-1 do 
+  if m[z mod k]-a[i]>=0 then 
+    begin
+     m[z mod k] -= a[i]; 
+     z += 1;   
+     a[i] := 0;
+    end
+    else 
+    begin
+      var q := z mod k;
+      for var j:= q + 1 to k+k do
+             if (j mod k <> q) then
+             begin
+               if (m[j mod k]-a[i] >= 0) then 
+             begin
+               m[j mod k]-=a[i];
+               z += j mod k + 1;
+               a[i] := 0;
+               break;
+              end;
+             end
+             else 
+               begin
+                 z += 1;
+                 break
+               end;
+    end;
+print(a.Sum, a.Cnt(x → x<>0))
