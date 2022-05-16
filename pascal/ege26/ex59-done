@@ -1,0 +1,19 @@
+//59 ОБЩЕСТВОЗ
+###
+uses school;
+assign(input, 'C:\Users\user\Downloads\26data\26-59.txt');
+var n := ReadLnInteger;
+var (mx,z) := (-maxint,0);
+var a := (1..n).Sel(x → ReadInteger2).ToA;
+a.Sort;
+var k := 0;
+for var i := 0 to n-2 do 
+  if (a[i][0] = a[i+1][0]) and (a[i+1][1]-a[i][1]-1=2) then
+  begin
+    if a[i][0] > mx then 
+    begin
+      mx := a[i][0];
+      z:=a[i][1]+1;
+      end;
+    end;
+    print(mx,z)
