@@ -1,0 +1,28 @@
+//57
+###
+uses school;
+assign(input, 'C:\Users\user\Downloads\26data\26-57.txt');
+var (n,m) := readlninteger2;
+var a := ReadArrInteger(n);
+a.SortDescending; 
+var k := 0;
+while a.Sum >= m do
+begin
+  a.SortDescending;
+  var z := 0;
+  for var i:=0 to n-1 do
+    if (a[i]+z<=m) and (a[i] <> 0) then
+    begin
+      z += a[i];
+      k += 1;
+      a[i] := 0
+    end 
+    else
+    begin
+      var ind := a.IndexOf(a.Wh(x → z+x>=m).min);
+      a[ind] -= m-z;
+      z := 0;
+      break
+      end;
+end;
+print(k,a.Cnt(x → x<>0))
