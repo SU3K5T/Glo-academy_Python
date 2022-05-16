@@ -1,0 +1,11 @@
+###
+uses school;
+assign(input, 'C:\Users\user\Desktop\ege2021kp (02.04.2021)\26data\26-53.txt');
+var n := ReadLninteger;
+var a := ReadArrinteger(n); var (mx,k) := (-maxint,0);
+for var i := 0 to n-2 do 
+  for var j := i+1 to n-1 do 
+    if (a[i] mod 2 <> 0) and (a[j] mod 2 <> 0) and (((a[i] + a[j]) div 2)  in a) then
+        (mx,k) := (max((a[i] + a[j]) div 2, mx),k+1);
+    pr(mx,k)
+      
