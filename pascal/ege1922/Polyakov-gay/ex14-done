@@ -1,0 +1,16 @@
+###
+uses school;
+[cache]
+function H(x,y:int):int;
+begin
+  if x+y>=74 then H := 0 else 
+  begin
+    var a:= |H(x*2,y),H(x+2,y),H(x,y*2),H(x,y+2)|;
+    if a.wh(z → z=0).cnt>0 then H := 1 else 
+      if a.wh(z → z<0).cnt>0 then H := a.wh(z → z<0).max*(-1)+1 else 
+                                                        H := a.max*(-1);
+     end;
+ end;
+(1..66).Wh(i → ((H(7+2,i)=1) or (H(7*2,i)=1) or (H(7,i+2)=1) or (H(7,i*2)=1))).Min.Prln;
+(1..66).Wh(i → (H(7,i)=2)).min.prln;
+(1..66).Wh(i → (H(7,i)=-2)).Prln;
