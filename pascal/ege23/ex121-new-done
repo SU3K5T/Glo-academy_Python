@@ -1,0 +1,22 @@
+uses school, SF;
+var a:set Of Int;
+var k := 0;
+function F(x,l:int):int;
+begin
+  if (x<l) then
+  begin
+    f(x+2,l);
+    f(x+5,l);
+  end else 
+    if (x=l) then
+     k += 1;
+end;
+begin 
+ for var i:=1 to 1000 do
+   begin
+     k := 0;
+    F(5,i);
+      if k = 34 then 
+     print(i)
+    end;
+end.
