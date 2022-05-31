@@ -1,0 +1,14 @@
+uses school,Sf;
+var mn := maxint; [cache]
+function F(x,l:int):int;
+begin
+  if x<227 then
+  begin
+    f(x+1,l+1);
+    f(x+5,l+1);
+    f(x*3,l+1);
+  end;
+  if x=227 then
+    mn := min(mn,l)
+end;
+begin F(1,0); mn.pr end.
