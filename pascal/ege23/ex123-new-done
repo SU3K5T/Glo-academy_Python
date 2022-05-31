@@ -1,0 +1,23 @@
+uses school, SF;
+var k := 0;   var a:set of int;
+function F(x,l:int):int;
+begin
+  if (x<80) and (l<5) then
+    begin
+     f(x+1,l+1);
+     f(x*2,l+1);
+     if x > 4 then 
+       f(x+x mod 4,l+1);
+    end;
+  if (x=80)then begin    k += 1;  exit; end;
+end;
+begin 
+for var j:=1 to 80 do
+  begin
+k:=0;
+F(j,0);
+if k>0 then
+ Include(A,j); 
+ END;
+ Print(a.count);
+ end.
