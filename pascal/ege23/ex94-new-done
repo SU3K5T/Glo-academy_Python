@@ -1,0 +1,15 @@
+uses school, SF;
+var k := 0;
+function F(x:int):int ;
+begin
+  if x>2 then
+    begin
+     f(x-1);
+     f(x-3);
+     if x>4 then 
+       f(x mod 4)
+    end;
+  if (x=2) then
+    k += 1;
+end;
+begin f(22); k.Pr  end.
