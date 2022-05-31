@@ -1,0 +1,15 @@
+uses school, SF;
+var k := 0;
+function F(x,d1:int):int;
+begin
+  if x=43 then d1:=1;
+  if x<63 then
+    begin
+      f(x+2,d1);
+      f(x+x-1,d1);
+      f(x+x+1,d1);
+    end;
+  if (x=63) and (d1=0) then
+    k += 1;
+end;
+begin F(7,0); k.Pr; end.
