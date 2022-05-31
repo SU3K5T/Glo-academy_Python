@@ -1,0 +1,14 @@
+uses school, SF;
+var a:set Of Int;
+function F(x,l:int):int;
+begin
+  if (l<6) then
+  begin
+    f(x+1,l+1);
+    f(x+2,l+1);
+    f(x*2,l+1)
+  end else 
+    if (x in [34..59]) then 
+      include(a,x) 
+end;
+begin F(1,0); print(a.count) end.
