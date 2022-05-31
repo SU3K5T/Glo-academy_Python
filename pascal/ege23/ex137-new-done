@@ -1,0 +1,14 @@
+uses school,SF;
+var k := 0;
+function F(x:int):int;
+begin
+  if x>dec('100',2) then
+  begin
+    f(x-1);
+    if x<>dec('1'+'0'*(bin(x).Cnt-1),2) then 
+    f(dec('1'+'0'*(bin(x).Cnt-1),2))
+  end else
+  if x=dec('100',2) then
+    k+=1
+end;
+begin F(dec('1100',2)); k.Pr end.
