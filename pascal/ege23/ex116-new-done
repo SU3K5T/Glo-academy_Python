@@ -1,0 +1,12 @@
+uses school, SF;
+var a :Set of int;
+function F(x,s:int):int;
+begin  
+  if s<4 then
+    begin
+     f(x+1,s+1);
+     f(x+5,s+1);
+     f(x*3,s+1)
+     end else include(a,x)
+    end;
+begin F(1,0); pr(a.count) end.
