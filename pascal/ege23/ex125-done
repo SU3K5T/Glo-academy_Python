@@ -1,0 +1,19 @@
+uses school, SF;
+var k := 0;
+function F(x,d1,d2:int):int;
+begin
+  if x=14 then d1 := 1; if x=33 then d2 := 1;
+  if x<45 then
+  begin
+    f(x+2,d1,d2);
+   for var i := x+1 to 100000 do 
+      if i.isPrime then 
+        begin
+          F(i,d1,d2);
+          break
+        end;
+  end;
+  if (d1=1) and (d2=0) and (x=45) then
+    k += 1;
+end;
+begin F(2,0,0); k.pr end.
