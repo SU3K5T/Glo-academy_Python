@@ -1,0 +1,7 @@
+### uses school;
+var a := ReadAllText('C:\Users\user\Desktop\ege2022kp (1)\24data\k7data\k7b-3.txt');
+var ma := 0;
+for var i := 1 to a.Cnt do 
+  if 'BAFE'*i+'BAF' in a then 
+    ma := max(ma, i*4);
+  print(ma+3)
