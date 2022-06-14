@@ -1,0 +1,12 @@
+###
+uses school;
+var a := ReadAllText('C:\Users\user\Desktop\ege2022kp (1)\24data\k7data\k7a-5.txt');
+var ma := 0;var k := 0;
+for var i:=1 to a.Cnt do
+begin
+  if (a[i]<>'C') and (a[i]<>'F') then K+=1 
+  else
+    (ma,k) := (max(ma,k),0);
+  end;
+  ma := max(ma,k);
+  print(ma)
