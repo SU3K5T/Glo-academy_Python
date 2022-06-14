@@ -1,0 +1,7 @@
+### uses school;
+var a := ReadAllText('C:\Users\user\Desktop\ege2022kp (1)\24data\k7data\k7b-5.txt');
+var ma := 0;
+for var i := 1 to a.Cnt do 
+  if 'CA'*i in a then 
+    ma := max(ma, i*2);
+  print(ma)
