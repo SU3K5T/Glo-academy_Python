@@ -1,0 +1,22 @@
+uses school,SF;
+var a := ReadAllLines('C:\Users\user\Desktop\ege2022kp (6)\18data\18-0.csv').
+  sel(s → (s.split(';').Wh(z → (z<>'') and (z<>',')).sel(e → e.toi)).toa).toa;
+var ma := -maxint;
+var z := 0;
+[cache]
+function f(x,y,s:int):int;
+begin
+  if (x+1<=9) and (y+1<=9) then f(x+1,y+1,s+a[x+1,y+1]);
+  if (x+1<=9) then f(x+1,y,s+a[x+1,y]);
+  if (x+1<=9) and (y-1>=0) then f(x+1,y-1,s+a[x+1,y]);
+  if (x=9) and (s>ma) then begin         ma:=s;       z := a[x,y];    end;
+end;
+begin
+  var (mama,e1,e2):=(0,0,0);
+ for var i := 0 to 9 do 
+   begin
+     z:=0; ma:=0;  f(0,i, a[0,i]);
+     if (ma>mama) then begin  mama:=ma; e1:=a[0,i]; e2:=z end;
+  end;
+  Print(e1,e2);
+end.
