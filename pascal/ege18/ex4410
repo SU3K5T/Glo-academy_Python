@@ -1,0 +1,19 @@
+### uses school;
+for var i:=520000 to 10000000 do
+begin
+  var (z,s,ma) := (0,0,-maxint);
+ for var j:=2 to trunc(sqrt(i)) do
+   if (i mod j = 0) then 
+   begin
+     s += j;
+     ma := max(ma,j);
+   if  (j <> i div j) then 
+     begin
+     s +=  i div j;
+     ma := max(ma,i div j);
+     end;
+ end;
+var t:=inttostr(s);
+ if (t<>'') and (ma<>-maxint) and (ReverseString(t)=t) then
+   prln(i,ma);
+ end;
